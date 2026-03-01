@@ -112,7 +112,7 @@ const Content = () => {
 										Pendaftaran
 									</h4>
 									<p className="text-amber-700 font-bold text-sm">
-										Rp 20.000 / Orang
+										Rp 30.000 / Orang
 									</p>
 								</div>
 							</div>
@@ -138,7 +138,7 @@ const Content = () => {
 									<p className="text-white text-[10px] font-black uppercase tracking-widest">
 										Bonus
 									</p>
-									<p className="text-amber-400 font-black">Free Air Mineral</p>
+									<p className="text-cyan-700 font-black">Free Air Mineral</p>
 								</div>
 							</div>
 
@@ -232,7 +232,7 @@ const Content = () => {
 										Langkah 2
 									</p>
 									<p className="leading-tight font-bold text-lg md:text-base">
-										Bayar 20rb{' '}
+										Bayar 30rb{' '}
 										<span className="block text-sm font-normal text-emerald-300">
 											Ambil Air Mineral
 										</span>
