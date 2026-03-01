@@ -23,7 +23,7 @@ const Content = () => {
 				/>
 			),
 			title: 'Jutaan Rupiah',
-			desc: 'Hadiah tunai pembinaan untuk para pemenang tercepat.',
+			desc: 'Hadiah tunai untuk para pemenang tercepat.',
 		},
 		{
 			icon: (
@@ -33,7 +33,7 @@ const Content = () => {
 				/>
 			),
 			title: 'Medali Juara',
-			desc: 'Simbol kejayaan bagi sang raja lintasan Sintong Bakti.',
+			desc: 'Simbol kejayaan bagi sang raja lintasan Sintong.',
 		},
 		{
 			icon: (
@@ -73,7 +73,7 @@ const Content = () => {
 						viewport={{ once: true }}
 						transition={{ duration: 0.8 }}>
 						<span className="inline-block px-4 py-1 mb-4 bg-amber-100 text-amber-700 rounded-full font-bold text-xs uppercase tracking-[0.2em]">
-							Sintong Bakti Pride 2026
+							Sintong Edition 2026
 						</span>
 						<h2 className="text-5xl md:text-7xl font-black text-emerald-950 uppercase tracking-tighter mb-6 leading-[0.9]">
 							ADU CEPAT <br />
@@ -98,7 +98,7 @@ const Content = () => {
 										Lokasi Arena
 									</h4>
 									<p className="text-emerald-800 font-bold text-sm">
-										Masjid Raya Annur
+										Jalur 2 Masjid Raya Annur
 									</p>
 								</div>
 							</div>
@@ -210,9 +210,9 @@ const Content = () => {
 										Langkah 1
 									</p>
 									<p className="leading-tight font-bold text-lg md:text-base">
-										Datang{' '}
+										Daftar{' '}
 										<span className="block text-sm font-normal text-emerald-300">
-											Ke Masjid Annur
+											Hubungi Panitia
 										</span>
 									</p>
 								</div>

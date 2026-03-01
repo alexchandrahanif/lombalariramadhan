@@ -44,7 +44,7 @@ const Navbar = () => {
 								Ramadan<span className="text-amber-400">Run</span>
 							</span>
 							<span className="text-[10px] text-amber-200/70 font-bold tracking-[0.2em] uppercase">
-								Sintong Bakti 2026
+								Sintong Edition 2026
 							</span>
 						</div>
 					</a>

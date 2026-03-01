@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Content from './components/Content';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Information from './components/Information';
 
 const App = () => {
 	return (
@@ -14,6 +15,7 @@ const App = () => {
 				<div className="h-24 md:h-32" />
 				<div className="relative z-10">
 					<Content />
+					<Information />
 					<Contact />
 					<Footer />
 				</div>

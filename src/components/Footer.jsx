@@ -23,7 +23,7 @@ const Footer = () => {
 								Ramadan<span className="text-amber-400">Run</span>
 							</h4>
 							<p className="text-emerald-500 font-bold text-[10px] uppercase tracking-[0.3em]">
-								Sintong Bakti Edition
+								Sintong Edition 2026
 							</p>
 						</div>
 					</motion.div>
