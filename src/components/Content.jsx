@@ -194,7 +194,7 @@ const Content = () => {
 							DAFTAR SEKARANG!
 						</h3>
 						<p className="text-emerald-200/70 mb-10 font-medium tracking-wide text-sm md:text-base max-w-lg mx-auto">
-							Langsung datang ke lokasi Ba'da Tarawih. Siapkan 20K-mu dan rebut
+							Langsung datang ke lokasi Ba'da Tarawih. Siapkan 30K-mu dan rebut
 							Hadiahnya!
 						</p>
 
