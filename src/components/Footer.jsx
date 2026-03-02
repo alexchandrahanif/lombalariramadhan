@@ -49,9 +49,16 @@ const Footer = () => {
 
 						{/* Creator Credit */}
 						<p className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-							Made with{' '}
-							<span className="text-red-500 text-lg animate-pulse">❤️</span> by
-							<span className="text-emerald-200">Alex Chandra Hanif</span>
+							Dibuat Oleh{' '}
+							<a
+								href="https://alexchandrahanif.vercel.app/#profile"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-emerald-200 hover:text-amber-400 transition-colors duration-300 font-bold underline decoration-emerald-800 underline-offset-4">
+								Alex Chandra Hanif
+							</a>{' '}
+							dengan
+							<span className="text-red-500 text-lg animate-pulse">❤️</span>
 						</p>
 					</div>
 				</div>
