@@ -243,14 +243,14 @@ const Contact = () => {
 									className="bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-xl font-black uppercase text-[10px] tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all">
 									Daftar ke Harlen <Send size={14} />
 								</motion.button>
-
+{/* 
 								<motion.button
 									whileHover={{ scale: 1.02 }}
 									whileTap={{ scale: 0.98 }}
 									onClick={(e) => handlePendaftaran(e, '6282288474827')}
 									className="bg-amber-500 hover:bg-amber-600 text-emerald-950 p-4 rounded-xl font-black uppercase text-[10px] tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all">
 									Daftar ke Yuda <Send size={14} />
-								</motion.button>
+								</motion.button> */}
 							</div>
 
 							<p className="text-center text-[9px] text-slate-500 font-bold uppercase tracking-wider">
