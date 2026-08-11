@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#02060b"/>
+      <stop offset="1" stop-color="#0b1b2c"/>
+    </linearGradient>
+    <radialGradient id="blue">
+      <stop stop-color="#159cff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#159cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#000" flood-opacity=".75"/>
+    </filter>
+    <pattern id="grid" width="55" height="55" patternUnits="userSpaceOnUse">
+      <path d="M55 0H0V55" fill="none" stroke="#159cff" stroke-opacity=".065"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="920" cy="270" r="420" fill="url(#blue)"/>
+  <path d="M0 550 430 120" stroke="#ff4b14" stroke-opacity=".11" stroke-width="2"/>
+  <path d="M40 630 510 160" stroke="#159cff" stroke-opacity=".12" stroke-width="2"/>
+  <text x="72" y="103" fill="#ffb000" font-family="Arial,sans-serif" font-size="16" font-weight="900" letter-spacing="5">TURNAMEN MINI SOCCER SINTONG</text>
+  <text x="72" y="205" fill="#ffffff" font-family="Arial,sans-serif" font-size="67" font-weight="900" font-style="italic">PEMUDA CUP III</text>
+  <text x="72" y="258" fill="#8998aa" font-family="Arial,sans-serif" font-size="22" font-weight="700">02 September 2026 · Lapangan Putri Hijau</text>
+  <rect x="72" y="306" width="360" height="104" fill="#07111d" stroke="#ffb000" stroke-opacity=".48"/>
+  <text x="98" y="340" fill="#8390a2" font-family="Arial,sans-serif" font-size="12" font-weight="900" letter-spacing="3">TOTAL HADIAH</text>
+  <text x="98" y="388" fill="#ffb000" font-family="Arial,sans-serif" font-size="42" font-weight="900">Rp5.000.000</text>
+  <text x="72" y="480" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="800">16 TIM · KUOTA TERBATAS</text>
+  <text x="72" y="518" fill="#768497" font-family="Arial,sans-serif" font-size="16">Kompetisi, sportivitas, dan kebanggaan dalam satu lapangan.</text>
+  <rect x="72" y="558" width="220" height="4" fill="#ffb000"/>
+  <g filter="url(#shadow)">
+    <image href="pemuda-cup-logo.png" x="650" y="25" width="540" height="540" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+</svg>

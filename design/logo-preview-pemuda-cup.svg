@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#02060c"/>
+      <stop offset="1" stop-color="#0a1624"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffdc6a"/>
+      <stop offset="1" stop-color="#f39a00"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff6b32"/>
+      <stop offset="1" stop-color="#e93808"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#159cff" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <circle cx="1330" cy="130" r="300" fill="#159cff" opacity=".05"/>
+  <circle cx="100" cy="930" r="260" fill="#ff4b14" opacity=".05"/>
+
+  <text x="90" y="95" fill="#ffb000" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="6">LOGO CONCEPTS · PEMUDA CUP III</text>
+  <text x="90" y="145" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="800">Pilih arah identitas yang paling cocok</text>
+  <text x="90" y="180" fill="#748398" font-family="Arial, sans-serif" font-size="15">Ketiga konsep dibuat untuk website, jersey, poster, favicon, dan preview link.</text>
+
+  <!-- CARD 1 -->
+  <g transform="translate(70 240)" filter="url(#shadow)">
+    <rect width="460" height="650" rx="8" fill="#07111d" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="32" y="50" fill="#ffb000" font-family="Arial" font-size="13" font-weight="800" letter-spacing="3">01 · THE CHAMPION SHIELD</text>
+    <g transform="translate(105 105)">
+      <path d="M125 0 245 43v126c0 91-59 151-120 184C64 320 5 260 5 169V43Z" fill="#050b13" stroke="url(#gold)" stroke-width="7"/>
+      <path d="M125 19 225 55v108c0 73-46 124-100 156-54-32-100-83-100-156V55Z" fill="none" stroke="#159cff" stroke-opacity=".45" stroke-width="2"/>
+      <path d="M89 72h72v45c0 38-20 63-36 72-16-9-36-34-36-72Z" fill="none" stroke="url(#gold)" stroke-width="8"/>
+      <path d="M89 87H65v17c0 27 18 42 43 42M161 87h24v17c0 27-18 42-43 42M125 188v35M91 226h68" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+      <path d="m76 265 49-26 49 26-49 27Z" fill="#ff4b14"/>
+      <text x="125" y="285" text-anchor="middle" fill="#fff" font-family="Arial" font-size="23" font-weight="900">III</text>
+    </g>
+    <text x="230" y="505" text-anchor="middle" fill="#fff" font-family="Arial" font-size="42" font-weight="900" font-style="italic">PEMUDA CUP</text>
+    <text x="230" y="548" text-anchor="middle" fill="#ff4b14" font-family="Arial" font-size="30" font-weight="900" letter-spacing="12">III</text>
+    <text x="230" y="585" text-anchor="middle" fill="#758397" font-family="Arial" font-size="11" font-weight="700" letter-spacing="5">SINTONG · 2026</text>
+    <rect x="32" y="614" width="396" height="1" fill="#fff" opacity=".08"/>
+    <text x="32" y="638" fill="#647287" font-family="Arial" font-size="11">Klasik · berwibawa · cocok untuk jersey</text>
+  </g>
+
+  <!-- CARD 2 -->
+  <g transform="translate(570 240)" filter="url(#shadow)">
+    <rect width="460" height="650" rx="8" fill="#07111d" stroke="#159cff" stroke-opacity=".22"/>
+    <text x="32" y="50" fill="#159cff" font-family="Arial" font-size="13" font-weight="800" letter-spacing="3">02 · THE SPEED MONOGRAM</text>
+    <g transform="translate(70 118)">
+      <path d="M18 55h205l62 60-62 60H18l53-60Z" fill="#0a1725" stroke="#159cff" stroke-width="3"/>
+      <path d="M7 89h262M31 141h238" stroke="#159cff" stroke-opacity=".25" stroke-width="2"/>
+      <text x="145" y="147" text-anchor="middle" fill="#fff" font-family="Arial" font-size="115" font-weight="900" font-style="italic" letter-spacing="-15">PC</text>
+      <path d="M239 35h71l-38 160h-71Z" fill="url(#orange)"/>
+      <text x="259" y="150" text-anchor="middle" fill="#07111d" font-family="Arial" font-size="67" font-weight="900" font-style="italic">III</text>
+      <circle cx="54" cy="222" r="20" fill="none" stroke="#ffb000" stroke-width="3"/>
+      <path d="m54 202 15 11-6 18H45l-6-18Zm0 20v20M34 235l-16 12M74 235l16 12" fill="none" stroke="#ffb000" stroke-width="3"/>
+      <path d="M110 222h178" stroke="#ffb000" stroke-width="3"/>
+      <text x="201" y="251" text-anchor="middle" fill="#ffb000" font-family="Arial" font-size="18" font-weight="900" letter-spacing="5">PEMUDA CUP</text>
+    </g>
+    <text x="230" y="505" text-anchor="middle" fill="#fff" font-family="Arial" font-size="42" font-weight="900" font-style="italic">PEMUDA CUP <tspan fill="#ff4b14">III</tspan></text>
+    <text x="230" y="548" text-anchor="middle" fill="#159cff" font-family="Arial" font-size="12" font-weight="800" letter-spacing="6">MINI SOCCER · SINTONG</text>
+    <rect x="32" y="614" width="396" height="1" fill="#fff" opacity=".08"/>
+    <text x="32" y="638" fill="#647287" font-family="Arial" font-size="11">Modern · cepat · kuat untuk digital</text>
+  </g>
+
+  <!-- CARD 3 -->
+  <g transform="translate(1070 240)" filter="url(#shadow)">
+    <rect width="460" height="650" rx="8" fill="#07111d" stroke="#ffb000" stroke-opacity=".2"/>
+    <text x="32" y="50" fill="#ffb000" font-family="Arial" font-size="13" font-weight="800" letter-spacing="3">03 · THE ELITE CREST</text>
+    <g transform="translate(85 94)">
+      <circle cx="145" cy="145" r="130" fill="#050a11" stroke="#ffb000" stroke-width="3"/>
+      <circle cx="145" cy="145" r="112" fill="none" stroke="#159cff" stroke-opacity=".34" stroke-width="2" stroke-dasharray="5 8"/>
+      <path d="M95 101h100v57c0 41-23 72-50 84-27-12-50-43-50-84Z" fill="none" stroke="url(#gold)" stroke-width="9"/>
+      <path d="M95 116H66v17c0 31 20 48 49 48M195 116h29v17c0 31-20 48-49 48M145 240v29M105 270h80" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+      <path d="m145 18 7 15 17 2-12 12 3 17-15-8-15 8 3-17-12-12 17-2Z" fill="#ff4b14"/>
+      <path d="M38 237 8 268M252 237l30 31" stroke="#ff4b14" stroke-width="7"/>
+    </g>
+    <path d="M90 413h280l-28 50H118Z" fill="url(#gold)"/>
+    <text x="230" y="448" text-anchor="middle" fill="#07111d" font-family="Arial" font-size="29" font-weight="900" font-style="italic">PEMUDA CUP III</text>
+    <text x="230" y="505" text-anchor="middle" fill="#fff" font-family="Arial" font-size="18" font-weight="900" letter-spacing="6">SINTONG</text>
+    <text x="230" y="542" text-anchor="middle" fill="#ff4b14" font-family="Arial" font-size="13" font-weight="800" letter-spacing="4">EST. 2026</text>
+    <rect x="32" y="614" width="396" height="1" fill="#fff" opacity=".08"/>
+    <text x="32" y="638" fill="#647287" font-family="Arial" font-size="11">Premium · seremonial · cocok untuk medali</text>
+  </g>
+
+  <text x="800" y="955" text-anchor="middle" fill="#526176" font-family="Arial" font-size="12" letter-spacing="3">PREVIEW ONLY · BELUM DITERAPKAN KE WEBSITE</text>
+</svg>

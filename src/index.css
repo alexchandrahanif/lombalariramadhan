@@ -6,8 +6,20 @@ html {
 	scroll-behavior: smooth;
 }
 
+body {
+	min-width: 320px;
+}
+
 /* Memberikan jarak agar konten tidak tertutup navbar saat discroll */
 #info,
 #contact {
 	scroll-margin-top: 100px;
+}
+
+#tentang,
+#detail,
+#penghargaan,
+#tim,
+#kontak {
+	scroll-margin-top: 72px;
 }
