@@ -83,10 +83,21 @@ const values = [
 	'Fair play, no cheating, respect',
 ];
 
+const registeredTeams = [
+	'Bascamp Pos x Ruwo A',
+	'Bascamp Pos x Ruwo B',
+	'Suang Sadu FC',
+	'Al Qarny Games',
+	'Perdana FC KM 10',
+];
+
 const teamSlots = Array.from({ length: 16 }, (_, index) => ({
 	number: index + 1,
-	name: null,
+	name: registeredTeams[index] ?? null,
 }));
+
+const registeredTeamCount = registeredTeams.length;
+const registrationProgress = `${(registeredTeamCount / teamSlots.length) * 100}%`;
 
 const EventPage = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -357,24 +368,24 @@ const EventPage = () => {
 						</div>
 						<div className="teams__status">
 							<div className="teams__counter">
-								<strong>0</strong><span>/ 16 tim</span>
+								<strong>{registeredTeamCount}</strong><span>/ 16 tim</span>
 							</div>
-							<div className="teams__progress"><span /></div>
-							<p>Belum ada tim terdaftar. Jadilah tim pertama yang mengamankan tempat.</p>
+							<div className="teams__progress"><span style={{ width: registrationProgress }} /></div>
+							<p>{registeredTeamCount} tim telah terdaftar. Masih tersedia {teamSlots.length - registeredTeamCount} slot untuk tim berikutnya.</p>
 						</div>
 					</div>
 					<div className="teams-grid">
 						{teamSlots.map((team) => (
 							<article
 								key={team.number}
-								className="team-slot">
+								className={`team-slot ${team.name ? 'team-slot--registered' : ''}`}>
 								<span className="team-slot__number">{String(team.number).padStart(2, '0')}</span>
 								<div className="team-slot__icon"><UserPlus /></div>
 								<div className="team-slot__copy">
 									<small>Slot Tim {team.number}</small>
 									<strong>{team.name ?? 'Tersedia'}</strong>
 								</div>
-								<span className="team-slot__status">Open</span>
+								<span className="team-slot__status">{team.name ? 'Terdaftar' : 'Open'}</span>
 							</article>
 						))}
 					</div>
