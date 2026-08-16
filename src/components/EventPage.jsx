@@ -89,6 +89,7 @@ const registeredTeams = [
 	'Suang Sadu FC',
 	'Al Qarny Games',
 	'Perdana FC KM 10',
+	'08Rokan Farm FC',
 ];
 
 const teamSlots = Array.from({ length: 16 }, (_, index) => ({
@@ -134,7 +135,10 @@ const EventPage = () => {
 					href="#beranda"
 					aria-label="Pemuda Cup III">
 					<span className="brand__mark brand__mark--image">
-						<img src={eventLogo} alt="" />
+						<img
+							src={eventLogo}
+							alt=""
+						/>
 					</span>
 					<span className="brand__copy">
 						<strong>
@@ -277,7 +281,10 @@ const EventPage = () => {
 								<div className="arena-visual__spotlight arena-visual__spotlight--left" />
 								<div className="arena-visual__spotlight arena-visual__spotlight--right" />
 								<div className="arena-visual__logo">
-									<img src={eventLogo} alt="Logo Pemuda Cup Sintong" />
+									<img
+										src={eventLogo}
+										alt="Logo Pemuda Cup Sintong"
+									/>
 								</div>
 								<div className="arena-visual__pitch">
 									<div />
@@ -368,10 +375,17 @@ const EventPage = () => {
 						</div>
 						<div className="teams__status">
 							<div className="teams__counter">
-								<strong>{registeredTeamCount}</strong><span>/ 16 tim</span>
+								<strong>{registeredTeamCount}</strong>
+								<span>/ 16 tim</span>
 							</div>
-							<div className="teams__progress"><span style={{ width: registrationProgress }} /></div>
-							<p>{registeredTeamCount} tim telah terdaftar. Masih tersedia {teamSlots.length - registeredTeamCount} slot untuk tim berikutnya.</p>
+							<div className="teams__progress">
+								<span style={{ width: registrationProgress }} />
+							</div>
+							<p>
+								{registeredTeamCount} tim telah terdaftar. Masih tersedia{' '}
+								{teamSlots.length - registeredTeamCount} slot untuk tim
+								berikutnya.
+							</p>
 						</div>
 					</div>
 					<div className="teams-grid">
@@ -379,19 +393,32 @@ const EventPage = () => {
 							<article
 								key={team.number}
 								className={`team-slot ${team.name ? 'team-slot--registered' : ''}`}>
-								<span className="team-slot__number">{String(team.number).padStart(2, '0')}</span>
-								<div className="team-slot__icon"><UserPlus /></div>
+								<span className="team-slot__number">
+									{String(team.number).padStart(2, '0')}
+								</span>
+								<div className="team-slot__icon">
+									<UserPlus />
+								</div>
 								<div className="team-slot__copy">
 									<small>Slot Tim {team.number}</small>
 									<strong>{team.name ?? 'Tersedia'}</strong>
 								</div>
-								<span className="team-slot__status">{team.name ? 'Terdaftar' : 'Open'}</span>
+								<span className="team-slot__status">
+									{team.name ? 'Terdaftar' : 'Open'}
+								</span>
 							</article>
 						))}
 					</div>
 					<div className="teams__cta">
-						<p>Pendaftaran berlangsung sampai 29 Agustus 2026 atau hingga seluruh slot terpenuhi.</p>
-						<a className="button button--primary" href={whatsappLink} target="_blank" rel="noreferrer">
+						<p>
+							Pendaftaran berlangsung sampai 29 Agustus 2026 atau hingga seluruh
+							slot terpenuhi.
+						</p>
+						<a
+							className="button button--primary"
+							href={whatsappLink}
+							target="_blank"
+							rel="noreferrer">
 							Ambil Slot Tim <ArrowRight />
 						</a>
 					</div>
@@ -571,7 +598,10 @@ const EventPage = () => {
 			<footer className="event-footer">
 				<div className="brand">
 					<span className="brand__mark brand__mark--image">
-						<img src={eventLogo} alt="" />
+						<img
+							src={eventLogo}
+							alt=""
+						/>
 					</span>
 					<span className="brand__copy">
 						<strong>
