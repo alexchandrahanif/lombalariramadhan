@@ -90,6 +90,7 @@ const registeredTeams = [
 	'Al Qarny Games',
 	'Perdana FC KM 10',
 	'08Rokan Farm FC',
+	'Elthar FC',
 ];
 
 const teamSlots = Array.from({ length: 16 }, (_, index) => ({
