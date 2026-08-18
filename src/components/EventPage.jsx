@@ -91,6 +91,7 @@ const registeredTeams = [
 	'Perdana FC KM 10',
 	'08Rokan Farm FC',
 	'Elthar FC',
+	'Kobatama Km7',
 ];
 
 const teamSlots = Array.from({ length: 16 }, (_, index) => ({
