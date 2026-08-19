@@ -92,6 +92,8 @@ const registeredTeams = [
 	'08Rokan Farm FC',
 	'Elthar FC',
 	'Kobatama Km7',
+	'SMA N3 Tanah Putih',
+	'Brimox Company',
 ];
 
 const teamSlots = Array.from({ length: 16 }, (_, index) => ({
