@@ -1,0 +1,63 @@
+/** @format */
+
+.sponsor-page { min-height: 100vh; overflow: hidden; color: #fff; background: #03070d; font-family: 'Inter',sans-serif; }
+.sponsor-page h1,.sponsor-page h2,.sponsor-page h3 { font-family: 'Barlow Condensed',sans-serif; }
+.sponsor-nav { position: relative; z-index: 5; height: 86px; padding: 0 max(5vw,24px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(3,7,13,.82); backdrop-filter: blur(18px); }
+.sponsor-brand { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+.sponsor-brand img { width: 54px; height: 54px; object-fit: cover; border: 1px solid rgba(255,176,0,.28); border-radius: 8px; }
+.sponsor-brand span { display: flex; flex-direction: column; text-transform: uppercase; }
+.sponsor-brand strong { font: italic 800 22px 'Barlow Condensed'; }
+.sponsor-brand small { margin-top: 3px; color: #7f8da0; font-size: 8px; font-weight: 800; letter-spacing: .2em; }
+.sponsor-back { display: inline-flex; align-items: center; gap: 9px; color: #dce7f5; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+.sponsor-back svg { width: 17px; color: #ffb000; }
+.sponsor-hero { position: relative; min-height: 600px; padding: 100px max(5vw,24px); display: flex; align-items: center; background: radial-gradient(circle at 75% 40%,rgba(22,156,255,.2),transparent 32%),linear-gradient(120deg,#03070d,#081522); }
+.sponsor-hero::after { content: ''; position: absolute; inset: 0; opacity: .12; background-image: linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px); background-size: 52px 52px; mask-image: linear-gradient(90deg,#000,transparent); }
+.sponsor-hero__glow { position: absolute; right: 8%; width: 360px; height: 360px; border: 1px solid rgba(255,176,0,.25); border-radius: 50%; box-shadow: 0 0 110px rgba(255,176,0,.12),inset 0 0 80px rgba(22,156,255,.08); }
+.sponsor-hero__content { position: relative; z-index: 1; width: min(900px,100%); }
+.sponsor-eyebrow { color: #ffb000; font-size: 10px; font-weight: 900; letter-spacing: .24em; text-transform: uppercase; }
+.sponsor-hero h1 { margin: 22px 0; font-size: clamp(70px,9vw,128px); font-style: italic; line-height: .76; letter-spacing: -.035em; text-transform: uppercase; }
+.sponsor-hero h1 em { color: #169cff; font-style: italic; }
+.sponsor-hero__content > p { max-width: 650px; color: #91a0b3; font-size: 15px; line-height: 1.8; }
+.sponsor-directory { width: min(1180px,calc(100% - 48px)); margin: auto; padding: 110px 0; }
+.sponsor-directory__heading { margin-bottom: 50px; }
+.sponsor-directory__heading h2 { margin: 12px 0 0; font-size: clamp(48px,6vw,78px); font-style: italic; line-height: .9; text-transform: uppercase; }
+.sponsor-directory__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.sponsor-directory__grid article { position: relative; min-height: 340px; padding: 22px; display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 25px; overflow: hidden; border: 1px solid rgba(255,255,255,.09); background: linear-gradient(145deg,#0a1523,#050b13); }
+.sponsor-directory__grid article:hover { border-color: rgba(255,176,0,.35); }
+.sponsor-rank { position: absolute; top: 5px; right: 16px; color: rgba(255,255,255,.05); font: 900 72px 'Barlow Condensed'; }
+.sponsor-directory__logo { min-height: 210px; display: grid; place-items: center; align-self: stretch; background: #fff; border-radius: 5px; }
+.sponsor-directory__logo img { width: 80%; max-height: 130px; object-fit: contain; }
+.sponsor-directory__logo > svg { width: 48px; height: 48px; color: #8793a0; }
+.sponsor-directory__body { position: relative; z-index: 1; display: flex; flex-direction: column; }
+.sponsor-directory__body > small { color: #ffb000; font-size: 8px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+.sponsor-directory__body h3 { margin: 7px 0 12px; font-size: 32px; font-style: italic; text-transform: uppercase; }
+.sponsor-directory__body > p { margin: 0 0 22px; color: #91a0b3; font-size: 12px; line-height: 1.7; }
+.sponsor-contribution,.sponsor-contact { padding: 12px 0; display: flex; align-items: flex-start; gap: 11px; border-top: 1px solid rgba(255,255,255,.08); }
+.sponsor-contribution svg,.sponsor-contact > svg { width: 18px; color: #169cff; }
+.sponsor-contribution span,.sponsor-contact span { display: flex; flex-direction: column; gap: 3px; }
+.sponsor-contribution small,.sponsor-contact small { color: #748398; font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.sponsor-contact b { display: flex; align-items: center; gap: 5px; color: #91a0b3; font-size: 10px; }
+.sponsor-contact b svg { width: 12px; }
+.sponsor-directory__body > a { width: max-content; margin-top: auto; padding: 11px 14px; display: inline-flex; align-items: center; gap: 8px; color: #07101b; background: #ffb000; font-size: 9px; font-weight: 900; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+.sponsor-directory__body > a svg { width: 15px; }
+.sponsor-state { grid-column: 1/-1; padding: 50px; color: #91a0b3; text-align: center; border: 1px solid rgba(255,255,255,.08); }
+.sponsor-footer { padding: 30px max(5vw,24px); display: flex; justify-content: space-between; color: #748398; border-top: 1px solid rgba(255,255,255,.08); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.sponsor-footer a { color: #ffb000; text-decoration: none; }
+
+@media (max-width: 900px) {
+	.sponsor-directory__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 650px) {
+	.sponsor-nav { height: 72px; padding-inline: 16px; }
+	.sponsor-brand img { width: 44px; height: 44px; }
+	.sponsor-brand strong { font-size: 18px; }
+	.sponsor-back { font-size: 0; }
+	.sponsor-back svg { width: 22px; height: 22px; }
+	.sponsor-hero { min-height: 570px; padding: 80px 20px; }
+	.sponsor-hero h1 { font-size: clamp(62px,20vw,88px); }
+	.sponsor-directory { width: calc(100% - 32px); padding: 80px 0; }
+	.sponsor-directory__grid article { grid-template-columns: 1fr; }
+	.sponsor-directory__logo { min-height: 180px; }
+	.sponsor-footer { align-items: flex-start; flex-direction: column; gap: 12px; }
+}

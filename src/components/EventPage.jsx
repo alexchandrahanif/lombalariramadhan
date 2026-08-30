@@ -10,7 +10,8 @@ import {
 	ChevronRight,
 	Clock3,
 	Copy,
-	Instagram,
+	HandCoins,
+	Landmark,
 	MapPin,
 	Menu,
 	MessageCircle,
@@ -27,6 +28,7 @@ import {
 } from 'lucide-react';
 import './EventPage.css';
 import eventLogo from '../assets/pemuda-cup-logo-transparent.png';
+import { supabase } from '../lib/supabase';
 
 const MotionDiv = motion.div;
 const MotionArticle = motion.article;
@@ -36,29 +38,44 @@ const navItems = [
 	{ label: 'Detail', href: '#detail' },
 	{ label: 'Tim', href: '#tim' },
 	{ label: 'Penghargaan', href: '#penghargaan' },
+	{ label: 'Sponsor', href: '#sponsor' },
+	{ label: 'Kas', href: '#transparansi' },
 	{ label: 'Kontak', href: '#kontak' },
 ];
+
+const formatCurrency = new Intl.NumberFormat('id-ID', {
+	style: 'currency',
+	currency: 'IDR',
+	maximumFractionDigits: 0,
+});
+
+const formatPublicDate = (value) =>
+	new Intl.DateTimeFormat('id-ID', {
+		day: '2-digit',
+		month: 'short',
+		year: 'numeric',
+	}).format(new Date(value));
 
 const timeline = [
 	{
 		date: '12–29',
 		month: 'Agustus 2026',
 		title: 'Pendaftaran Tim',
-		description: 'Amankan slot tim sebelum kuota terpenuhi.',
+		description: 'Periode resmi pendaftaran peserta Pemuda Cup III.',
 		icon: CalendarDays,
 	},
 	{
-		date: '30',
+		date: '29',
 		month: 'Agustus 2026',
 		title: 'Technical Meeting',
-		description: 'Pembahasan regulasi, drawing, dan teknis turnamen.',
+		description: 'Pemaparan regulasi, pengundian, dan ketentuan teknis turnamen.',
 		icon: Users,
 	},
 	{
 		date: '02',
 		month: 'September 2026',
 		title: 'Kick-off Turnamen',
-		description: 'Pertandingan resmi Pemuda Cup III dimulai.',
+		description: 'Rangkaian pertandingan resmi Pemuda Cup III dimulai.',
 		icon: Trophy,
 	},
 ];
@@ -67,7 +84,11 @@ const awards = [
 	{ title: 'Juara 1', subtitle: 'Uang pembinaan + trofi', icon: Trophy },
 	{ title: 'Juara 2', subtitle: 'Uang pembinaan + trofi', icon: Trophy },
 	{ title: 'Juara 3', subtitle: 'Uang pembinaan + trofi', icon: Award },
-	{ title: 'Top Score', subtitle: 'Uang pembinaan + trofi', icon: Target },
+	{
+		title: 'Pencetak Gol Terbanyak',
+		subtitle: 'Uang pembinaan + trofi',
+		icon: Target,
+	},
 	{ title: 'Pemain Terbaik', subtitle: 'Uang pembinaan + trofi', icon: Star },
 	{
 		title: 'Kiper Terbaik',
@@ -79,41 +100,58 @@ const awards = [
 const values = [
 	'Junjung tinggi sportivitas',
 	'Mempererat persaudaraan',
-	'Ciptakan generasi berprestasi',
-	'Fair play, no cheating, respect',
+	'Mendorong generasi berprestasi',
+	'Bertanding jujur dan saling menghormati',
 ];
-
-const registeredTeams = [
-	'Bascamp Pos x Ruwo A',
-	'Bascamp Pos x Ruwo B',
-	'Suang Sadu FC',
-	'Al Qarny Games',
-	'Perdana FC KM 10',
-	'08Rokan Farm FC',
-	'Elthar FC',
-	'Kobatama Km7',
-	'SMA N3 Tanah Putih',
-	'Brimox Company',
-];
-
-const teamSlots = Array.from({ length: 16 }, (_, index) => ({
-	number: index + 1,
-	name: registeredTeams[index] ?? null,
-}));
-
-const registeredTeamCount = registeredTeams.length;
-const registrationProgress = `${(registeredTeamCount / teamSlots.length) * 100}%`;
 
 const EventPage = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	const [numberCopied, setNumberCopied] = useState(false);
+	const [publicSponsors, setPublicSponsors] = useState([]);
+	const [publicTeams, setPublicTeams] = useState([]);
+	const [publicTransactions, setPublicTransactions] = useState([]);
+	const [financeLoading, setFinanceLoading] = useState(true);
 
 	useEffect(() => {
 		const handleScroll = () => setScrolled(window.scrollY > 24);
 		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
+
+	useEffect(() => {
+		const loadPublicData = async () => {
+			const [sponsorResult, transactionResult, teamResult] = await Promise.all([
+				supabase.from('sponsors').select('id, name, logo_url, contribution_amount').order('contribution_amount', { ascending: false }),
+				supabase.from('transactions').select('id, type, category, amount, transaction_date, description').order('transaction_date', { ascending: false }),
+				supabase.from('teams').select('*').order('name', { ascending: true }),
+			]);
+			const loadedTeams = [...(teamResult.data ?? [])].sort((first, second) =>
+				first.name.localeCompare(second.name, 'id', { sensitivity: 'base' }),
+			);
+			setPublicSponsors(sponsorResult.data ?? []);
+			setPublicTransactions(transactionResult.data ?? []);
+			setPublicTeams(loadedTeams);
+			setFinanceLoading(false);
+		};
+
+		loadPublicData();
+	}, []);
+
+	const teamSlots = Array.from({ length: 16 }, (_, index) => ({
+		number: index + 1,
+		name: publicTeams[index]?.name ?? null,
+	}));
+	const registeredTeamCount = publicTeams.length;
+	const registrationProgress = `${Math.min((registeredTeamCount / teamSlots.length) * 100, 100)}%`;
+
+	const contributionIncome = publicTransactions
+		.filter((item) => item.type === 'income' && item.category === 'contribution')
+		.sort((first, second) => Number(second.amount) - Number(first.amount));
+
+	const sponsorIncome = publicTransactions
+		.filter((item) => item.type === 'income' && item.category === 'sponsor')
+		.sort((first, second) => Number(second.amount) - Number(first.amount));
 
 	const whatsappLink =
 		'https://wa.me/6289648436688?text=Halo%20Kak%20Farel%2C%20saya%20ingin%20mendaftar%20Pemuda%20Cup%20III.';
@@ -169,7 +207,7 @@ const EventPage = () => {
 					href={whatsappLink}
 					target="_blank"
 					rel="noreferrer">
-					Daftar Tim <ArrowRight size={17} />
+					Lihat Peserta <ArrowRight size={17} />
 				</a>
 
 				<button
@@ -212,7 +250,7 @@ const EventPage = () => {
 								href={whatsappLink}
 								target="_blank"
 								rel="noreferrer">
-								Daftar via WhatsApp
+								Hubungi Panitia
 							</a>
 						</MotionDiv>
 					</MotionDiv>
@@ -237,7 +275,7 @@ const EventPage = () => {
 							<div className="hero__badge">
 								<Sparkles size={14} /> Turnamen Mini Soccer Sintong
 							</div>
-							<p className="hero__kicker">Saatnya buktikan timmu</p>
+							<p className="hero__kicker">Kompetisi Mini Soccer Pemuda Sintong</p>
 							<h1>
 								Pemuda{' '}
 								<span>
@@ -245,9 +283,8 @@ const EventPage = () => {
 								</span>
 							</h1>
 							<p className="hero__lead">
-								Kompetisi, sportivitas, dan kebanggaan bertemu di satu lapangan.
-								Rebut gelar juara Pemuda Cup III dan jadilah bagian dari sejarah
-								Sintong.
+								Pemuda Cup III mempertemukan tim-tim terbaik dalam kompetisi
+								yang menjunjung sportivitas, kebersamaan, dan prestasi.
 							</p>
 							<div className="hero__actions">
 								<a
@@ -255,7 +292,7 @@ const EventPage = () => {
 									href={whatsappLink}
 									target="_blank"
 									rel="noreferrer">
-									Daftarkan Tim <ArrowRight />
+									Lihat Daftar Tim <ArrowRight />
 								</a>
 								<a
 									className="button button--ghost"
@@ -323,7 +360,7 @@ const EventPage = () => {
 					</div>
 					<div>
 						<strong>8+4</strong>
-						<span>Starting + Cadangan</span>
+						<span>Pemain Inti + Cadangan</span>
 					</div>
 					<div>
 						<strong>2</strong>
@@ -336,17 +373,17 @@ const EventPage = () => {
 					id="tentang">
 					<div className="section-heading">
 						<div>
-							<span className="eyebrow">Lebih dari pertandingan</span>
+							<span className="eyebrow">Kompetisi dan kebersamaan</span>
 							<h2>
-								Bermain keras.
+								Kompetitif di lapangan.
 								<br />
-								<span>Tetap bersaudara.</span>
+								<span>Solid dalam kebersamaan.</span>
 							</h2>
 						</div>
 						<p>
-							Pemuda Cup III hadir sebagai ruang kompetisi bagi generasi muda
-							Sintong untuk menunjukkan kemampuan, membangun solidaritas, dan
-							menjunjung nilai fair play.
+							Pemuda Cup III menjadi wadah bagi generasi muda Sintong untuk
+							mengembangkan kemampuan, memperkuat solidaritas, dan menjunjung
+							tinggi sportivitas.
 						</p>
 					</div>
 					<div className="values-grid">
@@ -372,9 +409,9 @@ const EventPage = () => {
 						<div>
 							<span className="eyebrow">Daftar Peserta</span>
 							<h2>
-								Tim yang sudah
+								Tim peserta
 								<br />
-								<span>mengamankan slot.</span>
+								<span>Pemuda Cup III.</span>
 							</h2>
 						</div>
 						<div className="teams__status">
@@ -386,9 +423,8 @@ const EventPage = () => {
 								<span style={{ width: registrationProgress }} />
 							</div>
 							<p>
-								{registeredTeamCount} tim telah terdaftar. Masih tersedia{' '}
-								{teamSlots.length - registeredTeamCount} slot untuk tim
-								berikutnya.
+							{registeredTeamCount} tim telah terdaftar dari total kuota 16
+							tim peserta.
 							</p>
 						</div>
 					</div>
@@ -408,22 +444,21 @@ const EventPage = () => {
 									<strong>{team.name ?? 'Tersedia'}</strong>
 								</div>
 								<span className="team-slot__status">
-									{team.name ? 'Terdaftar' : 'Open'}
+									{team.name ? 'Terdaftar' : 'Tersedia'}
 								</span>
 							</article>
 						))}
 					</div>
 					<div className="teams__cta">
 						<p>
-							Pendaftaran berlangsung sampai 29 Agustus 2026 atau hingga seluruh
-							slot terpenuhi.
+							Pendaftaran resmi telah ditutup pada 29 Agustus 2026.
 						</p>
 						<a
 							className="button button--primary"
 							href={whatsappLink}
 							target="_blank"
 							rel="noreferrer">
-							Ambil Slot Tim <ArrowRight />
+							Hubungi Panitia <ArrowRight />
 						</a>
 					</div>
 				</section>
@@ -434,13 +469,13 @@ const EventPage = () => {
 					<div className="detail__intro">
 						<span className="eyebrow">Informasi Turnamen</span>
 						<h2>
-							Catat tanggalnya.
+							Rangkaian terjadwal.
 							<br />
-							<span>Siapkan tim terbaik.</span>
+							<span>Persiapan lebih terarah.</span>
 						</h2>
 						<p>
-							Proses pendaftaran hingga kick-off disusun jelas agar setiap tim
-							dapat mempersiapkan diri secara maksimal.
+							Seluruh tahapan turnamen disusun secara terstruktur agar setiap tim
+							dapat mengikuti agenda dan ketentuan dengan baik.
 						</p>
 						<div className="fees">
 							<div>
@@ -489,9 +524,9 @@ const EventPage = () => {
 						<div>
 							<span className="eyebrow">Hadiah & Penghargaan</span>
 							<h2>
-								Enam gelar.
+								Apresiasi terbaik.
 								<br />
-								<span>Satu panggung juara.</span>
+								<span>Untuk para juara.</span>
 							</h2>
 						</div>
 						<div className="total-prize">
@@ -517,19 +552,103 @@ const EventPage = () => {
 				</section>
 
 				<section
+					className="section public-sponsors"
+					id="sponsor">
+					<div className="section-heading">
+						<div>
+							<span className="eyebrow">Mitra Pemuda Cup III</span>
+							<h2>
+								Dukungan nyata.
+								<br />
+								<span>Untuk pemuda Sintong.</span>
+							</h2>
+						</div>
+					</div>
+					<div className="sponsor-marquee">
+						<div className="sponsor-marquee__track">
+							{[...publicSponsors, ...publicSponsors].map((sponsor, index) => (
+								<article
+									key={`${sponsor.id}-${index}`}
+									aria-hidden={index >= publicSponsors.length}>
+									<div className="public-sponsor-logo">
+									{sponsor.logo_url ? (
+											<img src={sponsor.logo_url} alt={index < publicSponsors.length ? `Logo ${sponsor.name}` : ''} />
+										) : (
+											<Landmark />
+										)}
+									</div>
+									<small>Sponsor Pemuda Cup III</small>
+									<h3>{sponsor.name}</h3>
+									<a href="/sponsor" tabIndex={index < publicSponsors.length ? 0 : -1}>Lihat Detail <ArrowRight /></a>
+								</article>
+							))}
+						</div>
+					</div>
+					<div className="public-sponsors__action">
+						<a className="button button--ghost" href="/sponsor">
+							Lihat Semua Sponsor <ArrowRight />
+						</a>
+					</div>
+						{!financeLoading && !publicSponsors.length && (
+							<div className="public-empty">Sponsor akan segera ditampilkan.</div>
+						)}
+				</section>
+
+				<section
+					className="public-finance"
+					id="transparansi">
+					<div className="section public-finance__inner">
+						<div className="section-heading">
+							<div>
+								<span className="eyebrow">Transparansi Kegiatan</span>
+								<h2>
+									Informasi terbuka.
+									<br />
+									<span>Akuntabilitas terjaga.</span>
+								</h2>
+							</div>
+						</div>
+
+						<div className="public-finance-grid">
+							<div className="public-ledger public-ledger--income">
+								<div className="public-ledger__head">
+									<div><HandCoins /><span><small>Uang Masuk</small><strong>Kontribusi</strong></span></div>
+								</div>
+								<div className="public-ledger__summary"><span>Total Kontribusi</span><strong>{formatCurrency.format(contributionIncome.reduce((sum, item) => sum + Number(item.amount), 0))}</strong></div>
+								<div className={`public-ledger__list ${contributionIncome.length > 10 ? 'public-ledger__list--scroll' : ''}`}>
+									{contributionIncome.map((item, index) => <article key={item.id}><span className="public-ledger__rank">{String(index + 1).padStart(2, '0')}</span><div><strong>{item.description}</strong><small><span>Tanggal: {formatPublicDate(item.transaction_date)}</span><span>Jenis: Kontribusi</span></small></div><b>+{formatCurrency.format(item.amount)}</b></article>)}
+									{!financeLoading && !contributionIncome.length && <div className="public-empty">Belum ada data kontribusi.</div>}
+								</div>
+							</div>
+
+							<div className="public-ledger public-ledger--sponsor">
+								<div className="public-ledger__head">
+									<div><Landmark /><span><small>Uang Masuk</small><strong>Sponsor</strong></span></div>
+								</div>
+								<div className="public-ledger__summary"><span>Total Sponsor</span><strong>{formatCurrency.format(sponsorIncome.reduce((sum, item) => sum + Number(item.amount), 0))}</strong></div>
+								<div className={`public-ledger__list ${sponsorIncome.length > 10 ? 'public-ledger__list--scroll' : ''}`}>
+									{sponsorIncome.map((item, index) => <article key={item.id}><span className="public-ledger__rank">{String(index + 1).padStart(2, '0')}</span><div><strong>{item.description}</strong><small><span>Tanggal: {formatPublicDate(item.transaction_date)}</span><span>Jenis: Sponsor</span></small></div><b>+{formatCurrency.format(item.amount)}</b></article>)}
+									{!financeLoading && !sponsorIncome.length && <div className="public-empty">Belum ada data sponsor.</div>}
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section
 					className="section contact"
 					id="kontak">
 					<div className="contact__card">
 						<div className="contact__copy">
-							<span className="eyebrow">Kuota hanya 16 tim</span>
+							<span className="eyebrow">Informasi Resmi Turnamen</span>
 							<h2>
-								Lapangan menunggu.
+								Informasi terpusat.
 								<br />
-								<span>Tim kamu siap?</span>
+								<span>Koordinasi lebih mudah.</span>
 							</h2>
 							<p>
-								Hubungi panitia untuk konfirmasi slot, regulasi lengkap, dan
-								proses pendaftaran Pemuda Cup III.
+								Hubungi panitia untuk informasi teknis, regulasi, dan koordinasi
+								pelaksanaan Pemuda Cup III.
 							</p>
 							<div className="contact__actions">
 								<a

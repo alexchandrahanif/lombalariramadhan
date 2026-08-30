@@ -1,6 +1,10 @@
 /** @format */
 
 import EventPage from './components/EventPage';
+import SponsorPage from './components/SponsorPage';
+import DashboardPage from './components/admin/DashboardPage';
+import LoginPage from './components/admin/LoginPage';
+import { AuthProvider, useAuth } from './context/AuthContext';
 
 /*
  * Konten website Ramadan Run sebelumnya sengaja dipertahankan.
@@ -28,6 +32,21 @@ import EventPage from './components/EventPage';
  * );
  */
 
-const App = () => <EventPage />;
+const AdminRoute = () => {
+	const { user, loading, configured } = useAuth();
+	if (loading) return <div className="admin-boot">Menyiapkan dashboard...</div>;
+	if (!configured || !user) return <LoginPage />;
+	return <DashboardPage />;
+};
+
+const App = () => {
+	const isAdminRoute = window.location.pathname.startsWith('/admin');
+	const isSponsorRoute = window.location.pathname.startsWith('/sponsor');
+	return (
+		<AuthProvider>
+			{isAdminRoute ? <AdminRoute /> : isSponsorRoute ? <SponsorPage /> : <EventPage />}
+		</AuthProvider>
+	);
+};
 
 export default App;
