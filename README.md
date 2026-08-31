@@ -35,7 +35,7 @@ Login disimpan di browser melalui `localStorage`. Supabase Authentication tidak 
 
 ```env
 VITE_SUPABASE_URL=https://PROJECT_ID.supabase.co
-VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 ```
 
 ## Migrasi database yang sudah dibuat
