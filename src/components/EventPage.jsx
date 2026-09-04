@@ -36,6 +36,8 @@ const MotionArticle = motion.article;
 const navItems = [
 	{ label: 'Tentang', href: '#tentang' },
 	{ label: 'Detail', href: '#detail' },
+	{ label: 'Group', href: '/group' },
+	{ label: 'Pertandingan', href: '/pertandingan' },
 	{ label: 'Tim', href: '#tim' },
 	{ label: 'Penghargaan', href: '#penghargaan' },
 	{ label: 'Sponsor', href: '#sponsor' },
@@ -204,10 +206,8 @@ const EventPage = () => {
 
 				<a
 					className="nav-cta"
-					href={whatsappLink}
-					target="_blank"
-					rel="noreferrer">
-					Lihat Peserta <ArrowRight size={17} />
+					href="/group">
+					Lihat Group <ArrowRight size={17} />
 				</a>
 
 				<button
@@ -289,10 +289,8 @@ const EventPage = () => {
 							<div className="hero__actions">
 								<a
 									className="button button--primary"
-									href={whatsappLink}
-									target="_blank"
-									rel="noreferrer">
-									Lihat Daftar Tim <ArrowRight />
+									href="/group">
+									Lihat Pembagian Group <ArrowRight />
 								</a>
 								<a
 									className="button button--ghost"

@@ -2,6 +2,9 @@
 
 import EventPage from './components/EventPage';
 import SponsorPage from './components/SponsorPage';
+import GroupPage from './components/GroupPage';
+import MatchCenterPage from './components/MatchCenterPage';
+import NewsPage, { NewsIndexPage } from './components/NewsPage';
 import DashboardPage from './components/admin/DashboardPage';
 import LoginPage from './components/admin/LoginPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -42,9 +45,13 @@ const AdminRoute = () => {
 const App = () => {
 	const isAdminRoute = window.location.pathname.startsWith('/admin');
 	const isSponsorRoute = window.location.pathname.startsWith('/sponsor');
+	const isGroupRoute = window.location.pathname.startsWith('/group');
+	const isMatchRoute = window.location.pathname.startsWith('/pertandingan');
+	const isNewsRoute = window.location.pathname.startsWith('/berita');
+	const newsSlug = window.location.pathname.split('/')[2];
 	return (
 		<AuthProvider>
-			{isAdminRoute ? <AdminRoute /> : isSponsorRoute ? <SponsorPage /> : <EventPage />}
+			{isAdminRoute ? <AdminRoute /> : isSponsorRoute ? <SponsorPage /> : isGroupRoute ? <GroupPage /> : isMatchRoute ? <MatchCenterPage /> : isNewsRoute ? (newsSlug ? <NewsPage slug={newsSlug} /> : <NewsIndexPage />) : <EventPage />}
 		</AuthProvider>
 	);
 };
