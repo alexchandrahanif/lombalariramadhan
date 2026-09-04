@@ -1,9 +1,5 @@
 {
 	"rewrites": [
-		{ "source": "/group", "destination": "/index.html" },
-		{ "source": "/pertandingan", "destination": "/index.html" },
-		{ "source": "/berita", "destination": "/index.html" },
-		{ "source": "/berita/:slug", "destination": "/index.html" },
 		{ "source": "/sponsor", "destination": "/index.html" },
 		{ "source": "/admin", "destination": "/index.html" },
 		{ "source": "/admin/:path*", "destination": "/index.html" }
