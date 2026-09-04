@@ -35,13 +35,9 @@ const MotionArticle = motion.article;
 
 const navItems = [
 	{ label: 'Tentang', href: '#tentang' },
-	{ label: 'Detail', href: '#detail' },
 	{ label: 'Group', href: '/group' },
 	{ label: 'Pertandingan', href: '/pertandingan' },
-	{ label: 'Tim', href: '#tim' },
-	{ label: 'Penghargaan', href: '#penghargaan' },
-	{ label: 'Sponsor', href: '#sponsor' },
-	{ label: 'Kas', href: '#transparansi' },
+	{ label: 'Berita', href: '/berita' },
 	{ label: 'Kontak', href: '#kontak' },
 ];
 
