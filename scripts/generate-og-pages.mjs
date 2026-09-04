@@ -28,31 +28,31 @@ const pages = [
 		route: 'berita/sman-3-tp-a-menang-dramatis-atas-tunas-muda',
 		title: 'Lima Gol Tercipta, SMAN 3 TP A Taklukkan Tunas Muda FC',
 		description: 'Hat-trick Barok membawa SMAN 3 TP A mengamankan kemenangan 3–2 dalam duel sengit Group B.',
-		image: '/og-share/sman3a-tunasmuda.png',
+		image: '/og-share/sman3a-tunasmuda.jpg',
 	},
 	{
 		route: 'berita/alqarny-dan-handayani-berbagi-poin',
 		title: 'Duel Ketat Tanpa Gol, Al-Qarny dan Handayani Berbagi Poin',
 		description: 'Pertahanan kedua tim tampil disiplin dalam hasil imbang 0–0 di laga Group A.',
-		image: '/og-share/alqarny-handayani.png',
+		image: '/og-share/alqarny-handayani.jpg',
 	},
 	{
 		route: 'berita/elthar-fc-buka-turnamen-dengan-kemenangan-telak',
 		title: 'Elthar FC Buka Turnamen dengan Kemenangan Meyakinkan',
 		description: 'Elthar FC mencetak tiga gol tanpa balas atas Brimox Company pada laga pembuka.',
-		image: '/og-share/elthar-brimox.png',
+		image: '/og-share/elthar-brimox.jpg',
 	},
 	{
 		route: 'berita/gol-cepat-faren-antar-sman-3-tp-b-taklukkan-casper',
 		title: 'Gol Cepat Faren Antar SMAN 3 TP B Taklukkan Casper FC',
 		description: 'Gol tunggal Faren pada menit keenam membawa SMAN 3 TP B meraih tiga poin penting di Group C.',
-		image: '/og-share/sman3b-casper.png',
+		image: '/og-share/sman3b-casper.jpg',
 	},
 	{
 		route: 'berita/ryo-jadi-pembeda-arwana-selection-menang-atas-pondok-hantu',
 		title: 'Ryo Jadi Pembeda, Arwana Selection Menang atas Pondok Hantu',
 		description: 'Arwana Selection mengamankan kemenangan 1–0 melalui gol Ryo dalam duel kompetitif Group C.',
-		image: '/og-share/arwana-pondokhantu.png',
+		image: '/og-share/arwana-pondokhantu.jpg',
 	},
 ];
 

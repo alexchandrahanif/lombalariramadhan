@@ -22,3 +22,5 @@
 .match-hero__logo small{margin-top:11px;color:#77869a;font-size:9px;font-weight:900;letter-spacing:.28em;text-transform:uppercase}
 @media(max-width:900px){.match-hero__logo{width:min(100%,550px);min-height:390px}.match-hero__logo img{width:205px;height:205px}}
 @media(max-width:680px){.match-hero__logo{min-height:330px;padding:30px}.match-hero__logo img{width:175px;height:175px}.match-hero__logo strong{font-size:39px}}
+
+.article-cover{height:auto;max-height:none;object-fit:contain;object-position:center}
