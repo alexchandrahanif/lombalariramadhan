@@ -32,7 +32,7 @@ const pages = [
 	},
 	{
 		route: 'berita/bescemp-poss-x-ruwo-b-redam-08-rokan-farm',
-		title: 'Bescemp Poss x Ruwo B Redam 08 Rokan Farm dalam Duel Empat Gol',
+		title: 'Di Bawah Arahan Manager Ekha Buyong, Bescemp Poss x Ruwo B Redam 08 Rokan Farm',
 		description: 'Bescemp Poss x Ruwo B menang 3–1 setelah membalas gol pembuka 08 Rokan Farm.',
 		image: '/og-share/bescempb-rokanfarm.jpg',
 	},
