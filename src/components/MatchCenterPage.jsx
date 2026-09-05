@@ -18,9 +18,9 @@ const MatchCard = ({ match }) => (
 		<div className="match-card__top"><span>{match.group}</span><b>{match.status}</b></div>
 		<div className="match-card__date"><CalendarDays /> {match.day}, {dateLabel(match.date)} <i>·</i> <Clock3 /> {match.time} WIB</div>
 		<div className="match-card__versus">
-			<div className="match-side"><img src={match.home.logo} alt="" /><strong>{match.home.name}</strong></div>
+			<div className="match-side"><img src={match.home.logo} alt="" loading="lazy" decoding="async" /><strong>{match.home.name}</strong></div>
 			<div className="match-score">{match.score ? <><b>{match.score[0]}</b><span>FT</span><b>{match.score[1]}</b></> : <span>VS</span>}</div>
-			<div className="match-side match-side--away"><img src={match.away.logo} alt="" /><strong>{match.away.name}</strong></div>
+			<div className="match-side match-side--away"><img src={match.away.logo} alt="" loading="lazy" decoding="async" /><strong>{match.away.name}</strong></div>
 		</div>
 		{match.events.length > 0 && <div className="match-card__events">{match.events.map((event) => <span key={event}>{event}</span>)}</div>}
 	</article>
@@ -29,7 +29,7 @@ const MatchCard = ({ match }) => (
 const Ranking = ({ title, label, entries, emptyText }) => (
 	<article className="ranking-card">
 		<div className="ranking-card__head"><span>{label}</span><h3>{title}</h3></div>
-		{entries.length ? <ol>{entries.map((entry, index) => <li key={`${entry.name}-${entry.team}`}><b>{index + 1}</b><img src={entry.logo} alt="" /><span><strong>{entry.name}</strong><small>{entry.team}</small></span><em>{entry.total}</em></li>)}</ol> : <div className="ranking-empty">{emptyText}</div>}
+		{entries.length ? <ol>{entries.map((entry, index) => <li key={`${entry.name}-${entry.team}`}><b>{index + 1}</b><img src={entry.logo} alt="" loading="lazy" decoding="async" /><span><strong>{entry.name}</strong><small>{entry.team}</small></span><em>{entry.total}</em></li>)}</ol> : <div className="ranking-empty">{emptyText}</div>}
 	</article>
 );
 
@@ -48,7 +48,7 @@ const MatchCenterPage = () => {
 			</section>
 			<section className="match-section match-section--upcoming"><div className="match-heading"><div><span>Agenda Berikutnya</span><h2>Jadwal Mendatang</h2></div></div><div className="match-list">{upcomingMatches.map((match) => <MatchCard key={match.id} match={match} />)}</div></section>
 			<section className="match-section" id="statistik"><div className="match-heading"><div><span>Performa Pemain</span><h2>Statistik Turnamen</h2></div><p>Statistik pemain mulai dicatat dan ditampilkan saat babak 8 besar.</p></div><div className="ranking-grid"><Ranking title="Top Skor" label="Gol Terbanyak" entries={statistics.scorers} emptyText="Data tersedia saat babak 8 besar" /><Ranking title="Kartu Kuning" label="Peringkat Disiplin" entries={statistics.yellowCards} emptyText="Data tersedia saat babak 8 besar" /><Ranking title="Kartu Merah" label="Peringkat Disiplin" entries={statistics.redCards} emptyText="Data tersedia saat babak 8 besar" /></div></section>
-			<section className="match-news"><div className="match-news__head"><div><span><Newspaper /> Ruang Berita</span><h2>Cerita dari Lapangan</h2></div><a href="/berita">Semua Berita <ArrowRight /></a></div><div className="news-preview-grid">{news.map((item) => <a href={`/berita/${item.slug}`} key={item.slug}><img src={item.image} alt="" /><div><small>{item.category} · {item.date}</small><h3>{item.title}</h3><p>{item.excerpt}</p><span>Baca Selengkapnya <ArrowRight /></span></div></a>)}</div></section>
+			<section className="match-news"><div className="match-news__head"><div><span><Newspaper /> Ruang Berita</span><h2>Cerita dari Lapangan</h2></div><a href="/berita">Semua Berita <ArrowRight /></a></div><div className="news-preview-grid">{news.map((item) => <a href={`/berita/${item.slug}`} key={item.slug}><img src={item.image} alt="" loading="lazy" decoding="async" /><div><small>{item.category} · {item.date}</small><h3>{item.title}</h3><p>{item.excerpt}</p><span>Baca Selengkapnya <ArrowRight /></span></div></a>)}</div></section>
 		</main>
 		<footer className="match-footer"><img src={eventLogo} alt="" /><strong>Junjung Tinggi Sportivitas</strong><span>© 2026 Pemuda Cup Sintong</span></footer>
 	</div>;

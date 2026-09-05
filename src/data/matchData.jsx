@@ -1,28 +1,25 @@
 /** @format */
 
-import smaLogo from '../assets/SMA3.png';
-import tunasMudaLogo from '../assets/tunasmuda.png';
-import alqarnyLogo from '../assets/alqarny.png';
-import handayaniLogo from '../assets/handayani.png';
-import eltharLogo from '../assets/elthar.png';
-import brimoxLogo from '../assets/brimox.png';
-import casperLogo from '../assets/casper.png';
-import arwanaLogo from '../assets/arwana.png';
-import pondokHantuLogo from '../assets/pondokhantu.png';
-import eternaLogo from '../assets/eterna.png';
-import kobatamaLogo from '../assets/kobatama.png';
-import basecampLogo from '../assets/basecamp.png';
-import rokanFarmLogo from '../assets/rokanfarm.png';
-import schedulePoster from '../assets/jadwal-minggu-1.png';
-import smaResultImage from '../assets/hasil-sman3-tunasmuda.png';
-import alqarnyResultImage from '../assets/hasil-alqarny-handayani.png';
-import eltharResultImage from '../assets/hasil-elthar-brimox.png';
-import sma3bResultImage from '../assets/hasil-sman3b-casper.png';
-import arwanaResultImage from '../assets/hasil-arwana-pondokhantu.png';
-import eternaResultImage from '../assets/hasil-eterna-kobatama.png';
-import bescempResultImage from '../assets/hasil-bescempb-rokanfarm.png';
-
-export const scheduleImage = schedulePoster;
+import smaLogo from '../assets/web/SMA3.webp';
+import tunasMudaLogo from '../assets/web/tunasmuda.webp';
+import alqarnyLogo from '../assets/web/alqarny.webp';
+import handayaniLogo from '../assets/web/handayani.webp';
+import eltharLogo from '../assets/web/elthar.webp';
+import brimoxLogo from '../assets/web/brimox.webp';
+import casperLogo from '../assets/web/casper.webp';
+import arwanaLogo from '../assets/web/arwana.webp';
+import pondokHantuLogo from '../assets/web/pondokhantu.webp';
+import eternaLogo from '../assets/web/eterna.webp';
+import kobatamaLogo from '../assets/web/kobatama.webp';
+import basecampLogo from '../assets/web/basecamp.webp';
+import rokanFarmLogo from '../assets/web/rokanfarm.webp';
+import smaResultImage from '../assets/web/hasil-sman3-tunasmuda.webp';
+import alqarnyResultImage from '../assets/web/hasil-alqarny-handayani.webp';
+import eltharResultImage from '../assets/web/hasil-elthar-brimox.webp';
+import sma3bResultImage from '../assets/web/hasil-sman3b-casper.webp';
+import arwanaResultImage from '../assets/web/hasil-arwana-pondokhantu.webp';
+import eternaResultImage from '../assets/web/hasil-eterna-kobatama.webp';
+import bescempResultImage from '../assets/web/hasil-bescempb-rokanfarm.webp';
 
 // UPDATE MALAMAN:
 // 1. Ubah score: null menjadi score: [golKandang, golTandang].

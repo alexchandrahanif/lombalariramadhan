@@ -3,19 +3,19 @@
 import { ArrowLeft, CalendarDays, MapPin, Shield } from 'lucide-react';
 import './GroupPage.css';
 import eventLogo from '../assets/pemuda-cup-logo-transparent.png';
-import basecampLogo from '../assets/basecamp.png';
-import alqarnyLogo from '../assets/alqarny.png';
-import handayaniLogo from '../assets/handayani.png';
-import smaLogo from '../assets/SMA3.png';
-import tunasMudaLogo from '../assets/tunasmuda.png';
-import eltharLogo from '../assets/elthar.png';
-import brimoxLogo from '../assets/brimox.png';
-import casperLogo from '../assets/casper.png';
-import arwanaLogo from '../assets/arwana.png';
-import pondokHantuLogo from '../assets/pondokhantu.png';
-import eternaLogo from '../assets/eterna.png';
-import kobatamaLogo from '../assets/kobatama.png';
-import rokanFarmLogo from '../assets/rokanfarm.png';
+import basecampLogo from '../assets/web/basecamp.webp';
+import alqarnyLogo from '../assets/web/alqarny.webp';
+import handayaniLogo from '../assets/web/handayani.webp';
+import smaLogo from '../assets/web/SMA3.webp';
+import tunasMudaLogo from '../assets/web/tunasmuda.webp';
+import eltharLogo from '../assets/web/elthar.webp';
+import brimoxLogo from '../assets/web/brimox.webp';
+import casperLogo from '../assets/web/casper.webp';
+import arwanaLogo from '../assets/web/arwana.webp';
+import pondokHantuLogo from '../assets/web/pondokhantu.webp';
+import eternaLogo from '../assets/web/eterna.webp';
+import kobatamaLogo from '../assets/web/kobatama.webp';
+import rokanFarmLogo from '../assets/web/rokanfarm.webp';
 
 const groups = [
 	{
