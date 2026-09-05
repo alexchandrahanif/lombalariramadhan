@@ -12,6 +12,8 @@ IMAGES = {
     'hasil-elthar-brimox.png': 'elthar-brimox.jpg',
     'hasil-sman3b-casper.png': 'sman3b-casper.jpg',
     'hasil-arwana-pondokhantu.png': 'arwana-pondokhantu.jpg',
+    'hasil-eterna-kobatama.png': 'eterna-kobatama.jpg',
+    'hasil-bescempb-rokanfarm.png': 'bescempb-rokanfarm.jpg',
 }
 
 

@@ -25,6 +25,18 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/kobatama-fc-pesta-empat-gol-ke-gawang-eterna',
+		title: 'Kobatama FC Pesta Empat Gol ke Gawang Eterna',
+		description: 'Kobatama FC tampil dominan dan menang telak 4–0 atas Eterna FC dalam laga Group D.',
+		image: '/og-share/eterna-kobatama.jpg',
+	},
+	{
+		route: 'berita/bescemp-poss-x-ruwo-b-redam-08-rokan-farm',
+		title: 'Bescemp Poss x Ruwo B Redam 08 Rokan Farm dalam Duel Empat Gol',
+		description: 'Bescemp Poss x Ruwo B menang 3–1 setelah membalas gol pembuka 08 Rokan Farm.',
+		image: '/og-share/bescempb-rokanfarm.jpg',
+	},
+	{
 		route: 'berita/sman-3-tp-a-menang-dramatis-atas-tunas-muda',
 		title: 'Lima Gol Tercipta, SMAN 3 TP A Taklukkan Tunas Muda FC',
 		description: 'Hat-trick Barok membawa SMAN 3 TP A mengamankan kemenangan 3–2 dalam duel sengit Group B.',
