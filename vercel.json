@@ -1,4 +1,11 @@
 {
+	"redirects": [
+		{
+			"source": "/berita/bescemp-poss-x-ruwo-b-redam-08-rokan-farm",
+			"destination": "/berita/di-bawah-arahan-manager-ekha-buyong-bescemp-redam-08-rokan-farm",
+			"permanent": true
+		}
+	],
 	"rewrites": [
 		{ "source": "/sponsor", "destination": "/index.html" },
 		{ "source": "/admin", "destination": "/index.html" },

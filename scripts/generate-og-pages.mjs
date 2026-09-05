@@ -31,7 +31,7 @@ const pages = [
 		image: '/og-share/eterna-kobatama.jpg',
 	},
 	{
-		route: 'berita/bescemp-poss-x-ruwo-b-redam-08-rokan-farm',
+		route: 'berita/di-bawah-arahan-manager-ekha-buyong-bescemp-redam-08-rokan-farm',
 		title: 'Di Bawah Arahan Manager Ekha Buyong, Bescemp Poss x Ruwo B Redam 08 Rokan Farm',
 		description: 'Bescemp Poss x Ruwo B menang 3–1 setelah membalas gol pembuka 08 Rokan Farm.',
 		image: '/og-share/bescempb-rokanfarm.jpg',
