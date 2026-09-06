@@ -25,6 +25,18 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/handayani-fc-taklukkan-bescemp-poss-ruwo-a',
+		title: 'Gol Awal dan Akhir Antar Handayani FC Taklukkan Bescemp Poss x Ruwo A',
+		description: 'Ridho M dan Ashadil mencetak gol kemenangan Handayani FC dalam laga Group A yang berakhir 2–0.',
+		image: '/og-share/basecampa-handayani.jpg',
+	},
+	{
+		route: 'berita/sman-3-tp-a-dan-brimox-berbagi-poin-tanpa-gol',
+		title: 'SMAN 3 TP A dan Brimox Company Berbagi Poin Tanpa Gol',
+		description: 'Duel Group B berlangsung ketat dan berakhir imbang 0–0.',
+		image: '/og-share/sman3a-brimox.jpg',
+	},
+	{
 		route: 'berita/kobatama-fc-pesta-empat-gol-ke-gawang-eterna',
 		title: 'Kobatama FC Pesta Empat Gol ke Gawang Eterna',
 		description: 'Kobatama FC tampil dominan dan menang telak 4–0 atas Eterna FC dalam laga Group D.',
