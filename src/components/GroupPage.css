@@ -32,7 +32,7 @@
 .group-section__heading span { color:var(--gold); font-size:9px; font-weight:900; letter-spacing:.22em; text-transform:uppercase; }
 .group-section__heading h2 { margin:8px 0 0; font:italic 900 clamp(50px,6vw,78px)/.9 'Barlow Condensed'; text-transform:uppercase; }
 .group-section__heading p { max-width:500px; justify-self:end; margin:0; color:#7f8da0; font-size:12px; line-height:1.75; }
-.group-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+.group-grid { display:grid; grid-template-columns:1fr; gap:24px; }
 .group-match-link { width:max-content; margin:38px auto 0; padding:16px 22px; display:flex; align-items:center; gap:10px; color:#05080d; background:var(--gold); font-size:10px; font-weight:900; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
 .group-match-link svg { transform:rotate(180deg); }
 .group-card { position:relative; overflow:hidden; background:linear-gradient(145deg,#0b1624,#060c14); border:1px solid rgba(255,255,255,.1); box-shadow:0 25px 60px rgba(0,0,0,.24); }
@@ -41,13 +41,30 @@
 .group-card__head > span { color:rgba(255,255,255,.09); font:900 55px 'Barlow Condensed'; line-height:1; }
 .group-card__head h3 { margin:0; font:italic 900 38px 'Barlow Condensed'; text-transform:uppercase; }
 .group-card__head small { margin-left:auto; padding:7px 10px; color:var(--gold); border:1px solid rgba(255,176,0,.25); font-size:8px; font-weight:900; letter-spacing:.15em; text-transform:uppercase; }
-.group-card__teams { padding:8px 24px 20px; }
-.group-team { min-height:105px; display:grid; grid-template-columns:34px 76px 1fr; align-items:center; gap:13px; border-bottom:1px solid rgba(255,255,255,.08); }
-.group-team:last-child { border-bottom:0; }
-.group-team__number { color:#536276; font:800 12px 'Barlow Condensed'; }
-.group-team__logo { width:68px; height:82px; display:grid; place-items:center; }
-.group-team__logo img { width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 8px 10px rgba(0,0,0,.45)); }
-.group-team strong { font:800 clamp(20px,2.3vw,29px) 'Barlow Condensed'; letter-spacing:.01em; text-transform:uppercase; }
+.standings-wrap { overflow-x:auto; }
+.standings-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+.standings-table th { height:44px; padding:0 10px; color:#68778b; background:rgba(0,0,0,.2); border-bottom:1px solid rgba(255,255,255,.08); font-size:9px; font-weight:900; letter-spacing:.12em; text-align:center; text-transform:uppercase; }
+.standings-table th:nth-child(1) { width:58px; }
+.standings-table th:nth-child(2) { width:auto; text-align:left; }
+.standings-table th:nth-child(n+3):nth-child(-n+7) { width:55px; }
+.standings-table th:nth-child(8) { width:70px; }
+.standings-table th:nth-child(9) { width:150px; text-align:left; }
+.standings-table td { height:78px; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.07); color:#bdc7d4; font:800 13px 'Inter'; text-align:center; }
+.standings-table tbody tr:last-child td { border-bottom:0; }
+.standings-table tbody tr { transition:background .2s; }
+.standings-table tbody tr:hover { background:rgba(255,255,255,.025); }
+.standing-position { width:28px; height:28px; display:inline-grid; place-items:center; color:#8290a1; border-left:3px solid #3b4655; font:900 15px 'Barlow Condensed'; }
+.standing-position--qualified { color:#fff; border-color:var(--blue); background:rgba(27,156,255,.1); }
+.standing-club { display:flex; align-items:center; gap:14px; min-width:0; text-align:left; }
+.standing-club img { width:48px; height:52px; flex:0 0 auto; object-fit:contain; filter:drop-shadow(0 7px 8px rgba(0,0,0,.4)); }
+.standing-club strong { overflow:hidden; font:800 clamp(17px,2vw,24px) 'Barlow Condensed'; letter-spacing:.01em; text-overflow:ellipsis; text-transform:uppercase; white-space:nowrap; }
+.standings-table .standing-points { color:var(--gold); font:900 24px 'Barlow Condensed'; }
+.standing-form { display:flex; align-items:center; gap:6px; }
+.standing-form small { color:#556274; }
+.form-result { width:28px; height:28px; display:grid; place-items:center; border-radius:50%; color:#fff; font:900 11px 'Inter'; box-shadow:0 5px 12px rgba(0,0,0,.25); }
+.form-result--w { background:#13a05a; }
+.form-result--d { background:#68778b; }
+.form-result--l { background:#d9363e; }
 .group-footer { min-height:120px; padding:25px max(5vw,24px); display:flex; align-items:center; justify-content:space-between; gap:30px; background:#02050a; border-top:1px solid rgba(255,255,255,.08); }
 .group-footer img { width:60px; height:60px; object-fit:cover; border-radius:8px; }
 .group-footer p { margin:0; color:var(--gold); font:italic 900 clamp(24px,4vw,45px) 'Barlow Condensed'; text-transform:uppercase; }
@@ -61,6 +78,7 @@
 	.group-hero__mark { display:none; }
 	.group-section__heading { grid-template-columns:1fr; gap:18px; text-align:center; }
 	.group-section__heading p { justify-self:center; }
+	.standings-table th:nth-child(4),.standings-table th:nth-child(5),.standings-table th:nth-child(6),.standings-table th:nth-child(7),.standings-table td:nth-child(4),.standings-table td:nth-child(5),.standings-table td:nth-child(6),.standings-table td:nth-child(7) { display:none; }
 }
 @media (max-width:700px) {
 	.group-nav { height:70px; padding-inline:16px; }
@@ -72,13 +90,20 @@
 	.group-hero h1 { font-size:clamp(62px,20vw,92px); }
 	.group-hero__meta { flex-direction:column; align-items:center; gap:10px; }
 	.group-section { width:calc(100% - 28px); padding:72px 0 85px; }
-	.group-grid { grid-template-columns:1fr; }
 	.group-card__head { min-height:80px; padding:18px; }
 	.group-card__head > span { font-size:43px; }
 	.group-card__head h3 { font-size:32px; }
-	.group-card__teams { padding-inline:16px; }
-	.group-team { grid-template-columns:25px 62px 1fr; min-height:92px; gap:9px; }
-	.group-team__logo { width:58px; height:70px; }
-	.group-team strong { font-size:21px; }
+	.standings-table th:nth-child(1) { width:42px; }
+	.standings-table th:nth-child(3) { width:38px; }
+	.standings-table th:nth-child(8) { width:48px; }
+	.standings-table th:nth-child(9) { width:86px; }
+	.standings-table th,.standings-table td { padding-inline:5px; }
+	.standings-table td { height:68px; }
+	.standing-club { gap:8px; }
+	.standing-club img { width:37px; height:42px; }
+	.standing-club strong { font-size:16px; white-space:normal; }
+	.standing-position { width:24px; height:26px; }
+	.form-result { width:24px; height:24px; font-size:9px; }
+	.standing-form { gap:4px; }
 	.group-footer { flex-direction:column; text-align:center; }
 }
