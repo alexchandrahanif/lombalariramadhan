@@ -25,6 +25,18 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/tunas-muda-dan-elthar-berbagi-poin',
+		title: 'Tunas Muda dan Elthar Berbagi Poin dalam Duel Sengit Group B',
+		description: 'Gol cepat Mhd. Syakir dibalas penalti Rama dalam laga yang berakhir 1–1.',
+		image: '/og-share/tunasmuda-elthar.jpg',
+	},
+	{
+		route: 'berita/sman-3-tp-b-dan-pondok-hantu-imbang-tanpa-gol',
+		title: 'SMAN 3 TP B dan Pondok Hantu Imbang Tanpa Gol',
+		description: 'Pertahanan kedua tim tampil disiplin dalam duel Group C yang berakhir 0–0.',
+		image: '/og-share/sman3b-pondokhantu.jpg',
+	},
+	{
 		route: 'berita/handayani-fc-taklukkan-bescemp-poss-ruwo-a',
 		title: 'Gol Awal dan Akhir Antar Handayani FC Taklukkan Bescemp Poss x Ruwo A',
 		description: 'Ridho M dan Ashadil mencetak gol kemenangan Handayani FC dalam laga Group A yang berakhir 2–0.',
