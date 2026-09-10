@@ -25,6 +25,30 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/arifin-bawa-arwana-taklukkan-sman-3-tp-b',
+		title: 'Dua Gol Arifin Bawa Arwana Selection Taklukkan SMAN 3 TP B',
+		description: 'Arwana Selection menang 3–1 setelah Arifin mencetak dua gol pada fase akhir pertandingan.',
+		image: '/og-share/sman3b-arwana.jpg',
+	},
+	{
+		route: 'berita/elthar-dan-sman-3-tp-a-berbagi-poin',
+		title: 'Elthar FC dan SMAN 3 TP A Berbagi Poin',
+		description: 'Gol Fateh dan Sarma DD membuat duel penting Group B berakhir imbang 1–1.',
+		image: '/og-share/elthar-sman3a.jpg',
+	},
+	{
+		route: 'berita/ripai-antar-tunas-muda-menang-atas-brimox',
+		title: 'Gol Tunggal Ripai Antar Tunas Muda Menang atas Brimox',
+		description: 'Gol Ripai pada menit ke-15 membawa Tunas Muda FC menang 1–0 atas Brimox Company.',
+		image: '/og-share/tunasmuda-brimox.jpg',
+	},
+	{
+		route: 'berita/enam-gol-warnai-imbang-eterna-dan-rokan-farm',
+		title: 'Enam Gol Warnai Hasil Imbang Eterna dan 08 Rokan Farm',
+		description: 'Eterna FC dan 08 Rokan Farm saling berbalas gol dalam duel Group D yang berakhir 3–3.',
+		image: '/og-share/eterna-rokanfarm.jpg',
+	},
+	{
 		route: 'berita/tunas-muda-dan-elthar-berbagi-poin',
 		title: 'Tunas Muda dan Elthar Berbagi Poin dalam Duel Sengit Group B',
 		description: 'Gol cepat Mhd. Syakir dibalas penalti Rama dalam laga yang berakhir 1–1.',
