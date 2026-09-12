@@ -25,6 +25,12 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/delapan-tim-lolos-ke-babak-delapan-besar-pemuda-cup-iii',
+		title: 'Delapan Tim Pastikan Tempat di Babak 8 Besar Pemuda Cup III',
+		description: 'Dua tim terbaik dari masing-masing group melaju ke fase gugur Pemuda Cup III Sintong 2026.',
+		image: '/og-share/group.png',
+	},
+	{
 		route: 'berita/arwana-selection-pesta-enam-gol-ke-gawang-casper',
 		title: 'Arwana Selection Pesta Enam Gol ke Gawang Casper FC',
 		description: 'Raju mencetak dua gol saat Arwana Selection menang telak 6–0 atas Casper FC.',
