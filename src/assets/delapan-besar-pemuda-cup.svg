@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03070d"/>
+      <stop offset="0.55" stop-color="#101a28"/>
+      <stop offset="1" stop-color="#220b08"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a18"/>
+      <stop offset="1" stop-color="#ffc400"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <circle cx="1050" cy="100" r="180" fill="#ff401b" opacity=".12" filter="url(#glow)"/>
+  <circle cx="110" cy="560" r="190" fill="#1b9cff" opacity=".1" filter="url(#glow)"/>
+  <path d="M0 0h1200v12H0z" fill="url(#gold)"/>
+  <text x="70" y="72" fill="#ffb000" font-family="Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="5">PEMUDA CUP III · SINTONG 2026</text>
+  <text x="70" y="145" fill="#ffffff" font-family="Arial Black, Arial, sans-serif" font-size="62" font-style="italic">8 TIM LOLOS</text>
+  <text x="70" y="205" fill="url(#gold)" font-family="Arial Black, Arial, sans-serif" font-size="62" font-style="italic">BABAK 8 BESAR</text>
+  <text x="73" y="245" fill="#91a0b3" font-family="Arial, sans-serif" font-size="18">Dua tim terbaik dari setiap group melaju ke fase gugur.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 290)">
+      <rect width="510" height="105" rx="8" fill="#0b1624" stroke="#243449"/>
+      <rect width="8" height="105" rx="4" fill="#ffb000"/>
+      <text x="32" y="31" fill="#ffb000" font-size="14" font-weight="800" letter-spacing="3">GROUP A</text>
+      <text x="32" y="62" fill="#fff" font-size="22" font-weight="800">Al-Qarny x Suang Sadu</text>
+      <text x="32" y="89" fill="#c0cad6" font-size="19" font-weight="700">Handayani FC</text>
+    </g>
+    <g transform="translate(620 290)">
+      <rect width="510" height="105" rx="8" fill="#0b1624" stroke="#243449"/>
+      <rect width="8" height="105" rx="4" fill="#ff6b20"/>
+      <text x="32" y="31" fill="#ffb000" font-size="14" font-weight="800" letter-spacing="3">GROUP B</text>
+      <text x="32" y="62" fill="#fff" font-size="22" font-weight="800">Elthar FC</text>
+      <text x="32" y="89" fill="#c0cad6" font-size="19" font-weight="700">SMAN 3 TP A</text>
+    </g>
+    <g transform="translate(70 425)">
+      <rect width="510" height="105" rx="8" fill="#0b1624" stroke="#243449"/>
+      <rect width="8" height="105" rx="4" fill="#1b9cff"/>
+      <text x="32" y="31" fill="#ffb000" font-size="14" font-weight="800" letter-spacing="3">GROUP C</text>
+      <text x="32" y="62" fill="#fff" font-size="22" font-weight="800">Arwana Selection</text>
+      <text x="32" y="89" fill="#c0cad6" font-size="19" font-weight="700">Pondok Hantu</text>
+    </g>
+    <g transform="translate(620 425)">
+      <rect width="510" height="105" rx="8" fill="#0b1624" stroke="#243449"/>
+      <rect width="8" height="105" rx="4" fill="#13a05a"/>
+      <text x="32" y="31" fill="#ffb000" font-size="14" font-weight="800" letter-spacing="3">GROUP D</text>
+      <text x="32" y="62" fill="#fff" font-size="22" font-weight="800">Bescemp Poss x Ruwo B</text>
+      <text x="32" y="89" fill="#c0cad6" font-size="19" font-weight="700">08 Rokan Farm</text>
+    </g>
+  </g>
+  <text x="70" y="585" fill="#5f7187" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">FASE GROUP SELESAI · MENUJU FASE GUGUR</text>
+</svg>

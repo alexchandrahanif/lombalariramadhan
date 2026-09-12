@@ -28,7 +28,7 @@ const pages = [
 		route: 'berita/delapan-tim-lolos-ke-babak-delapan-besar-pemuda-cup-iii',
 		title: 'Delapan Tim Pastikan Tempat di Babak 8 Besar Pemuda Cup III',
 		description: 'Dua tim terbaik dari masing-masing group melaju ke fase gugur Pemuda Cup III Sintong 2026.',
-		image: '/og-share/group.png',
+		image: '/og-share/delapan-besar-pemuda-cup.png',
 	},
 	{
 		route: 'berita/arwana-selection-pesta-enam-gol-ke-gawang-casper',
