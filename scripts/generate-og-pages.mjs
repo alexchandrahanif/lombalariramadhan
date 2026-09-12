@@ -25,6 +25,42 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/arwana-selection-pesta-enam-gol-ke-gawang-casper',
+		title: 'Arwana Selection Pesta Enam Gol ke Gawang Casper FC',
+		description: 'Raju mencetak dua gol saat Arwana Selection menang telak 6–0 atas Casper FC.',
+		image: '/og-share/arwana-casper.jpg',
+	},
+	{
+		route: 'berita/bescemp-ruwo-b-dan-kobatama-berbagi-poin',
+		title: 'Bescemp Poss x Ruwo B dan Kobatama Berbagi Poin',
+		description: 'Gol Raka dibalas Wendi dalam pertandingan Group D yang berakhir imbang 1–1.',
+		image: '/og-share/basecampb-kobatama.jpg',
+	},
+	{
+		route: 'berita/rokan-farm-menang-telak-atas-kobatama',
+		title: 'Yoan Cetak Dua Gol, 08 Rokan Farm Menang Telak atas Kobatama',
+		description: 'Dua gol Yoan dan satu gol Aswandi membawa 08 Rokan Farm menang 3–0.',
+		image: '/og-share/kobatama-rokanfarm.jpg',
+	},
+	{
+		route: 'berita/pondok-hantu-taklukkan-casper-tiga-satu',
+		title: 'Pondok Hantu Taklukkan Casper FC dengan Skor 3–1',
+		description: 'Gol Saleh, Rian Max, dan Rapi membawa Pondok Hantu meraih kemenangan penting.',
+		image: '/og-share/casper-pondokhantu.jpg',
+	},
+	{
+		route: 'berita/alqarny-menang-dalam-duel-enam-gol-lawan-bescemp',
+		title: 'Al-Qarny Menang dalam Duel Enam Gol melawan Bescemp Poss x Ruwo A',
+		description: 'Dua gol Rasyid membantu Al-Qarny memenangi pertandingan Group A dengan skor 4–2.',
+		image: '/og-share/basecampa-alqarny.jpg',
+	},
+	{
+		route: 'berita/bescemp-ruwo-b-menang-wo-atas-eterna',
+		title: 'Bescemp Poss x Ruwo B Menang WO atas Eterna FC',
+		description: 'Bescemp Poss x Ruwo B mencatat kemenangan 3–0 melalui keputusan walkover.',
+		image: '/og-share/basecampb-eterna.jpg',
+	},
+	{
 		route: 'berita/arifin-bawa-arwana-taklukkan-sman-3-tp-b',
 		title: 'Dua Gol Arifin Bawa Arwana Selection Taklukkan SMAN 3 TP B',
 		description: 'Arwana Selection menang 3–1 setelah Arifin mencetak dua gol pada fase akhir pertandingan.',

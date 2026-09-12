@@ -148,7 +148,7 @@ const GroupPage = () => (
 									<tbody>{standings.map((team, teamIndex) => (
 										<tr key={`${group.name}-${team.name}`}>
 											<td><span className={`standing-position ${teamIndex < 2 ? 'standing-position--qualified' : ''}`}>{teamIndex + 1}</span></td>
-											<td><div className="standing-club"><img src={team.logo} alt={`Logo ${team.name}`} /><strong>{team.name}</strong></div></td>
+											<td><div className="standing-club"><img src={team.logo} alt={`Logo ${team.name}`} /><span className="standing-club__info"><strong>{team.name}</strong><small className={teamIndex < 2 ? 'team-status team-status--qualified' : 'team-status team-status--eliminated'}>{teamIndex < 2 ? 'Lolos' : 'Gugur'}</small></span></div></td>
 											<td>{team.played}</td><td>{team.won}</td><td>{team.drawn}</td><td>{team.lost}</td>
 											<td>{team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</td><td className="standing-points">{team.points}</td>
 											<td><div className="standing-form">{team.form.length ? team.form.map((result, resultIndex) => <span className={`form-result form-result--${result.toLowerCase()}`} title={result === 'W' ? 'Menang' : result === 'L' ? 'Kalah' : 'Seri'} key={`${team.name}-${resultIndex}`}>{result === 'W' ? 'M' : result === 'L' ? 'K' : 'S'}</span>) : <small>—</small>}</div></td>

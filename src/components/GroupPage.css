@@ -57,7 +57,11 @@
 .standing-position--qualified { color:#fff; border-color:var(--blue); background:rgba(27,156,255,.1); }
 .standing-club { display:flex; align-items:center; gap:14px; min-width:0; text-align:left; }
 .standing-club img { width:48px; height:52px; flex:0 0 auto; object-fit:contain; filter:drop-shadow(0 7px 8px rgba(0,0,0,.4)); }
+.standing-club__info { min-width:0; display:flex; flex-direction:column; align-items:flex-start; gap:5px; }
 .standing-club strong { overflow:hidden; font:800 clamp(17px,2vw,24px) 'Barlow Condensed'; letter-spacing:.01em; text-overflow:ellipsis; text-transform:uppercase; white-space:nowrap; }
+.team-status { padding:3px 7px; border-radius:2px; font-size:7px; font-weight:900; letter-spacing:.13em; line-height:1; text-transform:uppercase; }
+.team-status--qualified { color:#64eaa4; background:rgba(19,160,90,.13); border:1px solid rgba(19,160,90,.36); }
+.team-status--eliminated { color:#ff7e84; background:rgba(217,54,62,.12); border:1px solid rgba(217,54,62,.32); }
 .standings-table .standing-points { color:var(--gold); font:900 24px 'Barlow Condensed'; }
 .standing-form { display:flex; align-items:center; gap:6px; }
 .standing-form small { color:#556274; }
