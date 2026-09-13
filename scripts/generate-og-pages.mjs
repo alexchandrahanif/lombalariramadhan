@@ -19,6 +19,12 @@ const pages = [
 		image: '/og-share/pertandingan.png',
 	},
 	{
+		route: '8-besar',
+		title: 'Bracket Babak 8 Besar Pemuda Cup III Sintong 2026',
+		description: 'Jadwal perempat final, semifinal, perebutan posisi tiga, dan final Pemuda Cup III.',
+		image: '/og-share/delapan-besar-pemuda-cup.png',
+	},
+	{
 		route: 'berita',
 		title: 'Berita Pemuda Cup III Sintong 2026',
 		description: 'Laporan pertandingan dan cerita terbaru dari Pemuda Cup III Sintong 2026.',

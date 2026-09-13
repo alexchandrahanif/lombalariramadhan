@@ -160,7 +160,7 @@ const GroupPage = () => (
 						);
 					})}
 				</div>
-				<a className="group-match-link" href="/pertandingan">Lihat Jadwal & Hasil Pertandingan <ArrowLeft /></a>
+				<a className="group-match-link" href="/8-besar">Lihat Bracket Babak 8 Besar <ArrowLeft /></a>
 			</section>
 		</main>
 

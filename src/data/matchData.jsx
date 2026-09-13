@@ -35,6 +35,7 @@ import kobatamaRokanFarmResultImage from '../assets/web/hasil-kobatama-rokanfarm
 import arwanaCasperResultImage from '../assets/web/hasil-arwana-casper.jpg';
 import basecampBKobatamaResultImage from '../assets/web/hasil-basecampb-kobatama.jpg';
 import quarterFinalistsImage from '../assets/delapan-besar-pemuda-cup.png';
+import tournamentLogo from '../assets/pemuda-cup-logo-transparent.png';
 
 // UPDATE MALAMAN:
 // 1. Ubah score: null menjadi score: [golKandang, golTandang].
@@ -62,6 +63,14 @@ export const matches = [
   { id:'basecampb-vs-eterna', date:'2026-09-11', day:'Jumat', time:'17:00', group:'Group D', home:{name:'Bescemp Poss x Ruwo B',logo:basecampLogo}, away:{name:'Eterna FC',logo:eternaLogo}, score:[3,0], status:'Selesai', events:['Yoga P 1\', 2\', 3\' ⚽','Menang WO'], image:basecampBEternaResultImage },
   { id:'casper-vs-pondokhantu', date:'2026-09-12', day:'Sabtu', time:'16:00', group:'Group C', home:{name:'Casper FC',logo:casperLogo}, away:{name:'Pondok Hantu',logo:pondokHantuLogo}, score:[1,3], status:'Selesai', events:['Reihan 5\' 🟨','Saleh 11\' ⚽','Juan 23\' ⚽','Rian Max 25\' ⚽','Rapi 46\' ⚽'], image:casperPondokHantuResultImage },
   { id:'kobatama-vs-rokanfarm', date:'2026-09-12', day:'Sabtu', time:'17:00', group:'Group D', home:{name:'Kobatama FC',logo:kobatamaLogo}, away:{name:'08 Rokan Farm',logo:rokanFarmLogo}, score:[0,3], status:'Selesai', events:['Yoan 14\', 33\' ⚽','Aswandi 31\' ⚽'], image:kobatamaRokanFarmResultImage },
+  { id:'qf-alqarny-vs-sman3a', date:'2026-09-14', day:'Senin', time:'15:30', group:'8 Besar', home:{name:'Al-Qarny x Suang Sadu',logo:alqarnyLogo}, away:{name:'SMAN 3 TP A',logo:smaLogo}, score:null, status:'Akan Datang', events:[] },
+  { id:'qf-basecampb-vs-pondokhantu', date:'2026-09-14', day:'Senin', time:'16:40', group:'8 Besar', home:{name:'Bescemp Poss x Ruwo B',logo:basecampLogo}, away:{name:'Pondok Hantu',logo:pondokHantuLogo}, score:null, status:'Akan Datang', events:[] },
+  { id:'qf-arwana-vs-rokanfarm', date:'2026-09-15', day:'Selasa', time:'15:30', group:'8 Besar', home:{name:'Arwana Selection',logo:arwanaLogo}, away:{name:'08 Rokan Farm',logo:rokanFarmLogo}, score:null, status:'Akan Datang', events:[] },
+  { id:'qf-elthar-vs-handayani', date:'2026-09-15', day:'Selasa', time:'16:40', group:'8 Besar', home:{name:'Elthar FC',logo:eltharLogo}, away:{name:'Handayani FC',logo:handayaniLogo}, score:null, status:'Akan Datang', events:[] },
+  { id:'sf-winner-qf4-vs-winner-qf2', date:'2026-09-16', day:'Rabu', time:'16:30', group:'Semifinal', home:{name:'Pemenang QF 4',logo:tournamentLogo}, away:{name:'Pemenang QF 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil 8 Besar', events:[] },
+  { id:'sf-winner-qf1-vs-winner-qf3', date:'2026-09-17', day:'Kamis', time:'16:30', group:'Semifinal', home:{name:'Pemenang QF 1',logo:tournamentLogo}, away:{name:'Pemenang QF 3',logo:tournamentLogo}, score:null, status:'Menunggu Hasil 8 Besar', events:[] },
+  { id:'third-place-2026', date:'2026-09-19', day:'Sabtu', time:'16:30', group:'Perebutan Posisi 3', home:{name:'Kalah Semifinal 1',logo:tournamentLogo}, away:{name:'Kalah Semifinal 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil Semifinal', events:[] },
+  { id:'final-2026', date:'2026-09-20', day:'Minggu', time:'16:30', group:'Final', home:{name:'Pemenang Semifinal 1',logo:tournamentLogo}, away:{name:'Pemenang Semifinal 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil Semifinal', events:[] },
 ];
 
 export const statistics = {
