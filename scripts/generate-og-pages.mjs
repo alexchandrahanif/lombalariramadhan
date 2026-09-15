@@ -31,6 +31,30 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/elthar-singkirkan-handayani-lewat-adu-penalti',
+		title: 'Elthar FC Singkirkan Handayani lewat Adu Penalti',
+		description: 'Laga tanpa gol berlanjut ke adu penalti dan Elthar FC menang 5–3 untuk merebut tiket semifinal.',
+		image: '/og-share/qf-elthar-handayani.jpg',
+	},
+	{
+		route: 'berita/rokan-farm-taklukkan-arwana-di-babak-delapan-besar',
+		title: '08 Rokan Farm Taklukkan Arwana Selection 3–1',
+		description: 'Bima dan Fathul mencetak gol saat 08 Rokan Farm memastikan tempat di semifinal Pemuda Cup III.',
+		image: '/og-share/qf-arwana-rokanfarm.jpg',
+	},
+	{
+		route: 'berita/take-hat-trick-bescemp-ruwo-b-ke-semifinal',
+		title: 'Hat-trick Take Bawa Bescemp Poss x Ruwo B ke Semifinal',
+		description: 'Take mencetak tiga gol dalam kemenangan 4–1 Bescemp Poss x Ruwo B atas Pondok Hantu.',
+		image: '/og-share/qf-basecampb-pondokhantu.jpg',
+	},
+	{
+		route: 'berita/alqarny-lolos-semifinal-usai-menang-tiga-nol',
+		title: 'Al-Qarny Melaju ke Semifinal setelah Menang 3–0',
+		description: 'Dua gol Rasyid dan satu gol Kancil membawa Al-Qarny x Suang Sadu menyingkirkan SMAN 3 TP A.',
+		image: '/og-share/qf-alqarny-sman3a.jpg',
+	},
+	{
 		route: 'berita/delapan-tim-lolos-ke-babak-delapan-besar-pemuda-cup-iii',
 		title: 'Delapan Tim Pastikan Tempat di Babak 8 Besar Pemuda Cup III',
 		description: 'Dua tim terbaik dari masing-masing group melaju ke fase gugur Pemuda Cup III Sintong 2026.',
