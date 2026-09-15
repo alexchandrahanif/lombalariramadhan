@@ -19,7 +19,7 @@ const MatchCard = ({ match }) => (
 		<div className="match-card__date"><CalendarDays /> {match.day}, {dateLabel(match.date)} <i>·</i> <Clock3 /> {match.time} WIB</div>
 		<div className="match-card__versus">
 			<div className="match-side"><img src={match.home.logo} alt="" loading="lazy" decoding="async" /><strong>{match.home.name}</strong></div>
-			<div className="match-score">{match.score ? <><b>{match.score[0]}</b><span>FT</span><b>{match.score[1]}</b></> : <span>VS</span>}</div>
+			<div className="match-score">{match.score ? <><b>{match.score[0]}</b><span>FT{match.penaltyScore && <small>Pen. {match.penaltyScore[0]}–{match.penaltyScore[1]}</small>}</span><b>{match.score[1]}</b></> : <span>VS</span>}</div>
 			<div className="match-side match-side--away"><img src={match.away.logo} alt="" loading="lazy" decoding="async" /><strong>{match.away.name}</strong></div>
 		</div>
 		{match.events.length > 0 && <div className="match-card__events">{match.events.map((event) => <span key={event}>{event}</span>)}</div>}
