@@ -21,7 +21,7 @@ const quarterFinals = [
 
 const nextRounds = [
 	{ stage:'Semifinal 1', date:'Rabu, 16 September 2026', time:'16:30 WIB', finished:true, teams:[{ name:'Elthar FC', logo:eltharLogo, score:2 },{ name:'Bescemp Poss x Ruwo B', logo:basecampLogo, score:5, winner:true }] },
-	{ stage:'Semifinal 2', date:'Kamis, 17 September 2026', time:'16:30 WIB', teams:[{ name:'Al-Qarny x Suang Sadu', logo:alqarnyLogo },{ name:'08 Rokan Farm', logo:rokanFarmLogo }] },
+	{ stage:'Semifinal 2', date:'Kamis, 17 September 2026', time:'16:30 WIB', finished:true, teams:[{ name:'Al-Qarny x Suang Sadu', logo:alqarnyLogo, score:1, winner:true },{ name:'08 Rokan Farm', logo:rokanFarmLogo, score:0 }] },
 ];
 
 const TeamRow = ({ team }) => <div className={`knockout-team ${team.winner ? 'knockout-team--winner' : ''}`}><img src={team.logo} alt={`Logo ${team.name}`} /><strong>{team.name}</strong><span>{team.score ?? '—'}</span></div>;
@@ -37,7 +37,7 @@ const QuarterFinalPage = () => <div className="knockout-page">
 			<div className="knockout-board">
 				<section className="knockout-column"><header><span>01</span><div><small>Babak Pertama</small><h3>Perempat Final</h3></div><b>Selesai</b></header><div className="knockout-stack">{quarterFinals.map((match) => <article className="knockout-card" key={match.code}><div className="knockout-card__meta"><span>{match.code}</span><small><CalendarDays /> {match.date}</small><small><Clock3 /> {match.time}</small></div><TeamRow team={match.home} /><div className="knockout-versus">FT</div><TeamRow team={match.away} />{match.note && <div className="knockout-result-note">{match.note}</div>}</article>)}</div></section>
 				<section className="knockout-column knockout-column--middle"><header><span>02</span><div><small>Empat Terbaik</small><h3>Semifinal</h3></div><b>2 Laga</b></header><div className="knockout-stack knockout-stack--center">{nextRounds.map((match) => <PlaceholderMatch match={match} key={match.stage} />)}</div></section>
-				<section className="knockout-column knockout-column--final"><header><span>03</span><div><small>Panggung Utama</small><h3>Final</h3></div><b>2 Laga</b></header><div className="knockout-stack knockout-stack--center"><PlaceholderMatch match={{ stage:'Perebutan Posisi 3', date:'Sabtu, 19 September 2026', time:'16:30 WIB', teams:[{ name:'Elthar FC', logo:eltharLogo },'Kalah Semifinal 2'] }} /><article className="knockout-card knockout-card--champion"><Trophy /><span>Grand Final</span><h3>Minggu, 20 September 2026</h3><b>16:30 WIB</b><div><strong>Bescemp Poss x Ruwo B</strong><i>VS</i><strong>Pemenang Semifinal 2</strong></div></article></div></section>
+				<section className="knockout-column knockout-column--final"><header><span>03</span><div><small>Panggung Utama</small><h3>Final</h3></div><b>2 Laga</b></header><div className="knockout-stack knockout-stack--center"><PlaceholderMatch match={{ stage:'Perebutan Posisi 3', date:'Sabtu, 19 September 2026', time:'16:30 WIB', teams:[{ name:'Elthar FC', logo:eltharLogo },{ name:'08 Rokan Farm', logo:rokanFarmLogo }] }} /><article className="knockout-card knockout-card--champion"><Trophy /><span>Grand Final</span><h3>Minggu, 20 September 2026</h3><b>16:30 WIB</b><div><strong>Bescemp Poss x Ruwo B</strong><i>VS</i><strong>Al-Qarny x Suang Sadu</strong></div></article></div></section>
 			</div>
 			<div className="knockout-note"><span>Format</span><strong>Sistem Gugur</strong><p>Jika skor imbang pada waktu normal, pertandingan dilanjutkan sesuai regulasi turnamen.</p></div>
 		</section>

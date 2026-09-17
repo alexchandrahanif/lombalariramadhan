@@ -31,6 +31,12 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/fendra-bawa-alqarny-ke-final-pemuda-cup-iii',
+		title: 'Gol Fendra Bawa Al-Qarny ke Final Pemuda Cup III',
+		description: 'Gol tunggal Fendra membawa Al-Qarny x Suang Sadu menang 1–0 atas 08 Rokan Farm pada semifinal.',
+		image: '/og-share/sf-alqarny-rokanfarm.jpg',
+	},
+	{
 		route: 'berita/farel-hat-trick-bescemp-lolos-final-pemuda-cup-iii',
 		title: 'Hat-trick Farel Antar Bescemp Poss x Ruwo B ke Final',
 		description: 'Farel mencetak tiga gol saat Bescemp Poss x Ruwo B menaklukkan Elthar FC 5–2 pada semifinal Pemuda Cup III.',

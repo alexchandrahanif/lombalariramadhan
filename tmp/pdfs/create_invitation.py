@@ -109,7 +109,7 @@ box_w = content_width - 32 * mm
 pdf.setFillColor(PALE)
 pdf.roundRect(box_x, y - box_h, box_w, box_h, 3 * mm, fill=1, stroke=0)
 details = [
-    ("Hari/Tanggal", "Minggu, 20 September 2026"),
+    ("Hari/Tanggal", "Sabtu, 19 September 2026"),
     ("Waktu", "16.00 WIB sampai selesai"),
     ("Tempat", "Lapangan Putri Hijau, Sintong"),
     ("Agenda", "Final dan Penutupan Pemuda Cup III"),
