@@ -38,6 +38,7 @@ import qfAlqarnySma3aResultImage from '../assets/web/hasil-qf-alqarny-sman3a.jpg
 import qfBasecampBPondokHantuResultImage from '../assets/web/hasil-qf-basecampb-pondokhantu.jpg';
 import qfArwanaRokanFarmResultImage from '../assets/web/hasil-qf-arwana-rokanfarm.jpg';
 import qfEltharHandayaniResultImage from '../assets/web/hasil-qf-elthar-handayani.jpg';
+import sfEltharBasecampBResultImage from '../assets/web/hasil-sf-elthar-basecampb.jpg';
 import quarterFinalistsImage from '../assets/delapan-besar-pemuda-cup.png';
 import tournamentLogo from '../assets/pemuda-cup-logo-transparent.png';
 
@@ -71,20 +72,23 @@ export const matches = [
   { id:'qf-basecampb-vs-pondokhantu', date:'2026-09-14', day:'Senin', time:'16:40', group:'8 Besar', home:{name:'Bescemp Poss x Ruwo B',logo:basecampLogo}, away:{name:'Pondok Hantu',logo:pondokHantuLogo}, score:[4,1], status:'Selesai', events:['Take 7\', 13\', 34\' ⚽','Roza F 45\' ⚽','Devri 46\' 🟨','Farel 49\' ⚽'], image:qfBasecampBPondokHantuResultImage },
   { id:'qf-arwana-vs-rokanfarm', date:'2026-09-15', day:'Selasa', time:'15:30', group:'8 Besar', home:{name:'Arwana Selection',logo:arwanaLogo}, away:{name:'08 Rokan Farm',logo:rokanFarmLogo}, score:[1,3], status:'Selesai', events:['Bima 13\' ⚽','Gol bunuh diri 33\' ⚽','Fathul 39\' ⚽','Wahyu 43\' ⚽'], image:qfArwanaRokanFarmResultImage },
   { id:'qf-elthar-vs-handayani', date:'2026-09-15', day:'Selasa', time:'16:40', group:'8 Besar', home:{name:'Elthar FC',logo:eltharLogo}, away:{name:'Handayani FC',logo:handayaniLogo}, score:[0,0], penaltyScore:[5,3], status:'Selesai', events:['Abdu 10\' 🟨','Dandi 25\' 🟨'], image:qfEltharHandayaniResultImage },
-  { id:'sf-elthar-vs-basecampb', date:'2026-09-16', day:'Rabu', time:'16:30', group:'Semifinal', home:{name:'Elthar FC',logo:eltharLogo}, away:{name:'Bescemp Poss x Ruwo B',logo:basecampLogo}, score:null, status:'Akan Datang', events:[] },
+  { id:'sf-elthar-vs-basecampb', date:'2026-09-16', day:'Rabu', time:'16:30', group:'Semifinal', home:{name:'Elthar FC',logo:eltharLogo}, away:{name:'Bescemp Poss x Ruwo B',logo:basecampLogo}, score:[2,5], status:'Selesai', events:['Farel 18\', 22\', 54\' ⚽','Fais 36\' ⚽','Enky CK 43\', 48\' ⚽','Ridho 59\' ⚽'], image:sfEltharBasecampBResultImage },
   { id:'sf-alqarny-vs-rokanfarm', date:'2026-09-17', day:'Kamis', time:'16:30', group:'Semifinal', home:{name:'Al-Qarny x Suang Sadu',logo:alqarnyLogo}, away:{name:'08 Rokan Farm',logo:rokanFarmLogo}, score:null, status:'Akan Datang', events:[] },
-  { id:'third-place-2026', date:'2026-09-19', day:'Sabtu', time:'16:30', group:'Perebutan Posisi 3', home:{name:'Kalah Semifinal 1',logo:tournamentLogo}, away:{name:'Kalah Semifinal 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil Semifinal', events:[] },
-  { id:'final-2026', date:'2026-09-20', day:'Minggu', time:'16:30', group:'Final', home:{name:'Pemenang Semifinal 1',logo:tournamentLogo}, away:{name:'Pemenang Semifinal 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil Semifinal', events:[] },
+  { id:'third-place-2026', date:'2026-09-19', day:'Sabtu', time:'16:30', group:'Perebutan Posisi 3', home:{name:'Elthar FC',logo:eltharLogo}, away:{name:'Kalah Semifinal 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil Semifinal 2', events:[] },
+  { id:'final-2026', date:'2026-09-20', day:'Minggu', time:'16:30', group:'Final', home:{name:'Bescemp Poss x Ruwo B',logo:basecampLogo}, away:{name:'Pemenang Semifinal 2',logo:tournamentLogo}, score:null, status:'Menunggu Hasil Semifinal 2', events:[] },
 ];
 
 export const statistics = {
   scorers:[
+    { name:'Farel', team:'Bescemp Poss x Ruwo B', total:4, logo:basecampLogo },
     { name:'Take', team:'Bescemp Poss x Ruwo B', total:3, logo:basecampLogo },
+    { name:'Enky CK', team:'Elthar FC', total:2, logo:eltharLogo },
     { name:'Rasyid', team:'Al-Qarny x Suang Sadu', total:2, logo:alqarnyLogo },
     { name:'Bima', team:'08 Rokan Farm', total:1, logo:rokanFarmLogo },
-    { name:'Farel', team:'Bescemp Poss x Ruwo B', total:1, logo:basecampLogo },
+    { name:'Fais', team:'Bescemp Poss x Ruwo B', total:1, logo:basecampLogo },
     { name:'Fathul', team:'08 Rokan Farm', total:1, logo:rokanFarmLogo },
     { name:'Kancil', team:'Al-Qarny x Suang Sadu', total:1, logo:alqarnyLogo },
+    { name:'Ridho', team:'Bescemp Poss x Ruwo B', total:1, logo:basecampLogo },
     { name:'Roza F', team:'Pondok Hantu', total:1, logo:pondokHantuLogo },
     { name:'Wahyu', team:'Arwana Selection', total:1, logo:arwanaLogo },
   ],
@@ -98,6 +102,7 @@ export const statistics = {
 };
 
 export const news = [
+  { slug:'farel-hat-trick-bescemp-lolos-final-pemuda-cup-iii', title:'Hat-trick Farel Antar Bescemp Poss x Ruwo B ke Final', excerpt:'Farel mencetak tiga gol saat Bescemp Poss x Ruwo B menaklukkan Elthar FC 5–2 pada semifinal Pemuda Cup III.', date:'16 September 2026', category:'Laporan Pertandingan', image:sfEltharBasecampBResultImage, matchId:'sf-elthar-vs-basecampb', paragraphs:['Bescemp Poss x Ruwo B memastikan tiket final Pemuda Cup III setelah mengalahkan Elthar FC dengan skor 5–2 pada semifinal di Lapangan Putri Hijau. Pertandingan berlangsung terbuka dan menghasilkan tujuh gol.','Farel tampil sebagai bintang dengan tiga gol pada menit ke-18, ke-22, dan ke-54. Fais menambah gol pada menit ke-36, sedangkan Ridho menutup pesta gol Bescemp pada menit ke-59.','Elthar FC sempat memberikan perlawanan melalui dua gol Enky CK pada menit ke-43 dan ke-48. Namun, Bescemp mampu menjaga keunggulan hingga selesai dan menjadi tim pertama yang memastikan tempat di final Pemuda Cup III.'] },
   { slug:'elthar-singkirkan-handayani-lewat-adu-penalti', title:'Elthar FC Singkirkan Handayani lewat Adu Penalti', excerpt:'Laga tanpa gol berlanjut ke adu penalti dan Elthar FC menang 5–3 untuk merebut tiket semifinal.', date:'15 September 2026', category:'Laporan Pertandingan', image:qfEltharHandayaniResultImage, matchId:'qf-elthar-vs-handayani', paragraphs:['Elthar FC memastikan tempat di semifinal Pemuda Cup III setelah menyingkirkan Handayani FC lewat adu penalti. Kedua tim bermain imbang 0–0 selama waktu normal dalam pertandingan 8 besar yang ketat.','Pertahanan Elthar dan Handayani sama-sama tampil disiplin sehingga peluang yang tercipta tidak mampu mengubah papan skor. Abdu menerima kartu kuning pada menit ke-10, sementara Dandi mendapat kartu kuning pada menit ke-25.','Adu penalti menjadi penentu setelah waktu normal berakhir. Elthar tampil lebih tenang dan menang 5–3 untuk melaju menghadapi Bescemp Poss x Ruwo B di semifinal.'] },
   { slug:'rokan-farm-taklukkan-arwana-di-babak-delapan-besar', title:'08 Rokan Farm Taklukkan Arwana Selection 3–1', excerpt:'Bima dan Fathul mencetak gol saat 08 Rokan Farm memastikan tempat di semifinal Pemuda Cup III.', date:'15 September 2026', category:'Laporan Pertandingan', image:qfArwanaRokanFarmResultImage, matchId:'qf-arwana-vs-rokanfarm', paragraphs:['08 Rokan Farm melaju ke semifinal Pemuda Cup III setelah mengalahkan Arwana Selection dengan skor 3–1 pada babak 8 besar. Rokan Farm tampil efektif dalam memanfaatkan momen penting pertandingan.','Bima membuka keunggulan pada menit ke-13. Gol bunuh diri pada menit ke-33 memperbesar keunggulan Rokan Farm sebelum Fathul mencetak gol ketiga pada menit ke-39.','Wahyu memperkecil ketertinggalan Arwana pada menit ke-43, tetapi skor 3–1 bertahan hingga selesai. Rokan Farm selanjutnya menghadapi Al-Qarny x Suang Sadu di semifinal.'] },
   { slug:'take-hat-trick-bescemp-ruwo-b-ke-semifinal', title:'Hat-trick Take Bawa Bescemp Poss x Ruwo B ke Semifinal', excerpt:'Take mencetak tiga gol dalam kemenangan 4–1 Bescemp Poss x Ruwo B atas Pondok Hantu.', date:'14 September 2026', category:'Laporan Pertandingan', image:qfBasecampBPondokHantuResultImage, matchId:'qf-basecampb-vs-pondokhantu', paragraphs:['Bescemp Poss x Ruwo B merebut tiket semifinal setelah menaklukkan Pondok Hantu 4–1 pada babak 8 besar Pemuda Cup III. Take menjadi bintang kemenangan lewat tiga gol.','Take mencetak gol pada menit ke-7, ke-13, dan ke-34. Pondok Hantu membalas melalui Roza F pada menit ke-45, tetapi Farel mengunci kemenangan Bescemp pada menit ke-49.','Devri menerima kartu kuning pada menit ke-46. Kemenangan ini membawa Bescemp Poss x Ruwo B bertemu Elthar FC pada semifinal 16 September 2026.'] },

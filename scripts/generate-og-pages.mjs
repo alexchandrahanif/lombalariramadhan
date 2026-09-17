@@ -31,6 +31,12 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/farel-hat-trick-bescemp-lolos-final-pemuda-cup-iii',
+		title: 'Hat-trick Farel Antar Bescemp Poss x Ruwo B ke Final',
+		description: 'Farel mencetak tiga gol saat Bescemp Poss x Ruwo B menaklukkan Elthar FC 5–2 pada semifinal Pemuda Cup III.',
+		image: '/og-share/sf-elthar-basecampb.jpg',
+	},
+	{
 		route: 'berita/elthar-singkirkan-handayani-lewat-adu-penalti',
 		title: 'Elthar FC Singkirkan Handayani lewat Adu Penalti',
 		description: 'Laga tanpa gol berlanjut ke adu penalti dan Elthar FC menang 5–3 untuk merebut tiket semifinal.',

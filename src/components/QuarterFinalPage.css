@@ -10,3 +10,7 @@
 .knockout-placeholder>div i{position:absolute;left:50%;bottom:-12px;z-index:1;transform:translateX(-50%)}
 .knockout-placeholder>div:only-child,.knockout-placeholder>div:not(:has(img)){grid-template-columns:1fr}
 .knockout-placeholder>div:not(:has(img)) strong{text-align:center}
+.knockout-placeholder>div:has(b){grid-template-columns:40px 1fr 24px}
+.knockout-placeholder>div>b{color:#fff;font:900 24px 'Barlow Condensed';text-align:center}
+.knockout-placeholder>div.knockout-placeholder__winner{background:rgba(255,176,0,.1);box-shadow:inset 3px 0 0 var(--gold)}
+.knockout-placeholder>div.knockout-placeholder__winner strong,.knockout-placeholder>div.knockout-placeholder__winner b{color:var(--gold)}
