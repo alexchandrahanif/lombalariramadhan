@@ -31,6 +31,12 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/dua-laga-penentuan-pemuda-cup-iii-digelar-sabtu',
+		title: 'Perebutan Posisi Tiga dan Final Pemuda Cup III Digelar Sabtu',
+		description: 'Elthar FC menghadapi 08 Rokan Farm sebelum Bescemp Poss x Ruwo B dan Al-Qarny x Suang Sadu bertarung di grand final.',
+		image: '/og-share/jadwal-final-pemuda-cup-iii.jpg',
+	},
+	{
 		route: 'berita/fendra-bawa-alqarny-ke-final-pemuda-cup-iii',
 		title: 'Gol Fendra Bawa Al-Qarny ke Final Pemuda Cup III',
 		description: 'Gol tunggal Fendra membawa Al-Qarny x Suang Sadu menang 1–0 atas 08 Rokan Farm pada semifinal.',
