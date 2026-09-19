@@ -31,6 +31,48 @@ const pages = [
 		image: '/og-share/berita.png',
 	},
 	{
+		route: 'berita/farel-raih-gelar-top-skor-pemuda-cup-iii',
+		title: 'Farel Raih Gelar Top Skor Pemuda Cup III',
+		description: 'Empat gol pada fase gugur membawa Farel menerima penghargaan top skor Pemuda Cup III Sintong 2026.',
+		image: '/og-share/penghargaan-farel-top-skor.jpg',
+	},
+	{
+		route: 'berita/yoga-dinobatkan-sebagai-kiper-terbaik-pemuda-cup-iii',
+		title: 'Yoga Dinobatkan sebagai Kiper Terbaik Pemuda Cup III',
+		description: 'Penampilan konsisten di bawah mistar mengantarkan Yoga meraih penghargaan kiper terbaik turnamen.',
+		image: '/og-share/penghargaan-yoga-kiper-terbaik.jpg',
+	},
+	{
+		route: 'berita/rido-terpilih-sebagai-pemain-terbaik-pemuda-cup-iii',
+		title: 'Rido Terpilih sebagai Pemain Terbaik Pemuda Cup III',
+		description: 'Rido menerima penghargaan pemain terbaik setelah menunjukkan performa menonjol sepanjang turnamen.',
+		image: '/og-share/penghargaan-rido-pemain-terbaik.jpg',
+	},
+	{
+		route: 'berita/aziz-raih-penghargaan-pemain-muda-terbaik-pemuda-cup-iii',
+		title: 'Aziz Raih Penghargaan Pemain Muda Terbaik Pemuda Cup III',
+		description: 'Aziz menjadi penerima penghargaan pemain muda terbaik Pemuda Cup III Sintong 2026.',
+		image: '/og-share/penghargaan-aziz-pemain-muda-terbaik.jpg',
+	},
+	{
+		route: 'berita/alqarny-juara-pemuda-cup-iii-sintong-2026',
+		title: 'Al-Qarny x Suang Sadu Juara Pemuda Cup III Sintong 2026',
+		description: 'Al-Qarny x Suang Sadu menutup perjalanan turnamen sebagai kampiun Pemuda Cup III Sintong 2026.',
+		image: '/og-share/juara-alqarny-pemuda-cup-iii.jpg',
+	},
+	{
+		route: 'berita/bescemp-poss-ruwo-b-runner-up-pemuda-cup-iii',
+		title: 'Bescemp Poss x Ruwo B Raih Runner-up Pemuda Cup III',
+		description: 'Bescemp Poss x Ruwo B mengakhiri turnamen sebagai runner-up setelah menembus pertandingan final.',
+		image: '/og-share/runner-up-bescemp-pemuda-cup-iii.jpg',
+	},
+	{
+		route: 'berita/elthar-fc-raih-posisi-tiga-pemuda-cup-iii',
+		title: 'Elthar FC Amankan Posisi Tiga Pemuda Cup III',
+		description: 'Elthar FC menutup turnamen dengan meraih posisi ketiga Pemuda Cup III Sintong 2026.',
+		image: '/og-share/posisi-tiga-elthar-pemuda-cup-iii.jpg',
+	},
+	{
 		route: 'berita/dua-laga-penentuan-pemuda-cup-iii-digelar-sabtu',
 		title: 'Perebutan Posisi Tiga dan Final Pemuda Cup III Digelar Sabtu',
 		description: 'Elthar FC menghadapi 08 Rokan Farm sebelum Bescemp Poss x Ruwo B dan Al-Qarny x Suang Sadu bertarung di grand final.',
