@@ -19,8 +19,9 @@ import './WifiLandingPage.css';
 
 const message = encodeURIComponent('Halo Admin FIA NET, saya tertarik untuk memasang WiFi FIA NET. Mohon info lebih lanjut.');
 const contacts = [
-	{ label: 'ADMIN 1', display: '0895 3936 14160', url: `https://wa.me/62895393614160?text=${message}` },
-	{ label: 'ADMIN 2', display: '0895 1935 4902', url: `https://wa.me/6289519354902?text=${message}` },
+	{ label: 'ADMIN 1', name: 'Ekha Buyong', display: '0853 7670 6580', url: `https://wa.me/6285376706580?text=${message}` },
+	{ label: 'ADMIN 2', name: 'Iyan', display: '0895 3936 14160', url: `https://wa.me/62895393614160?text=${message}` },
+	{ label: 'ADMIN 3', name: 'FIA NET', display: '0895 1935 4902', url: `https://wa.me/6289519354902?text=${message}` },
 ];
 const packages = [
 	{ name: 'Paket 1', price: '155.000', devices: 3, speed: 10 },
@@ -161,7 +162,7 @@ function WifiLandingPage() {
 						{contacts.map((contact) => (
 							<a className="contact-option" href={contact.url} target="_blank" rel="noreferrer" key={contact.display}>
 								<span className="contact-wa">WA</span>
-								<span><small>{contact.label}</small><strong>{contact.display}</strong></span>
+								<span><small>{contact.label} • {contact.name}</small><strong>{contact.display}</strong></span>
 								<ArrowRight size={19} />
 							</a>
 						))}

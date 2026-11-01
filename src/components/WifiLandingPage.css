@@ -149,11 +149,12 @@ footer p,footer small { color:#7f9ba6; }
 	position: relative;
 	z-index: 2;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(250px, 320px));
+	grid-template-columns: repeat(3, minmax(250px, 310px));
 	justify-content: center;
 	gap: 14px;
 	margin-top: 30px;
 }
+@media(max-width:960px){.contact-options{grid-template-columns:repeat(2,minmax(250px,320px))}}
 .final-cta .contact-option {
 	padding: 16px 18px;
 	background: #fff;
