@@ -9,6 +9,7 @@ import QuarterFinalPage from './components/QuarterFinalPage';
 import DashboardPage from './components/admin/DashboardPage';
 import LoginPage from './components/admin/LoginPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import WifiLandingPage from './components/WifiLandingPage';
 
 /*
  * Konten website Ramadan Run sebelumnya sengaja dipertahankan.
@@ -43,6 +44,11 @@ const AdminRoute = () => {
 	return <DashboardPage />;
 };
 
+/*
+ * Website Pemuda Cup lama tetap disimpan melalui seluruh route dan komponen
+ * di atas. Homepage lama (<EventPage />) dinonaktifkan sementara dan diganti
+ * landing page FIA NET.
+ */
 const App = () => {
 	const isAdminRoute = window.location.pathname.startsWith('/admin');
 	const isSponsorRoute = window.location.pathname.startsWith('/sponsor');
@@ -53,7 +59,7 @@ const App = () => {
 	const newsSlug = window.location.pathname.split('/')[2];
 	return (
 		<AuthProvider>
-			{isAdminRoute ? <AdminRoute /> : isSponsorRoute ? <SponsorPage /> : isQuarterFinalRoute ? <QuarterFinalPage /> : isGroupRoute ? <GroupPage /> : isMatchRoute ? <MatchCenterPage /> : isNewsRoute ? (newsSlug ? <NewsPage slug={newsSlug} /> : <NewsIndexPage />) : <EventPage />}
+			{isAdminRoute ? <AdminRoute /> : isSponsorRoute ? <SponsorPage /> : isQuarterFinalRoute ? <QuarterFinalPage /> : isGroupRoute ? <GroupPage /> : isMatchRoute ? <MatchCenterPage /> : isNewsRoute ? (newsSlug ? <NewsPage slug={newsSlug} /> : <NewsIndexPage />) : <WifiLandingPage />}
 		</AuthProvider>
 	);
 };
